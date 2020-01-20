@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: diegosaezapp
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: dalberto.saez
+Built-By: diegosaez
 Implementation-Vendor-Id: com.diego.saez
-Build-Jdk: 1.8.0_111
+Build-Jdk: 1.8.0_232
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/diegosaezapp
 Created-By: Maven Integration for Eclipse
