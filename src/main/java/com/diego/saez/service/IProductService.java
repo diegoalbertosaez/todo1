@@ -2,14 +2,15 @@ package com.diego.saez.service;
 
 import java.util.List;
 
-import com.diego.saez.model.Product;
+import com.diego.saez.dto.ProductDto;
+import com.diego.saez.exception.BussinessException;
 
 public interface IProductService {
 
-	List<Product> findAll();
+	List<ProductDto> findAll() throws BussinessException;
 
-	Product create(Product product);
+	ProductDto create(ProductDto product) throws BussinessException;
 
-	Product update(Product product) throws Exception;
+	ProductDto update(ProductDto product) throws Exception;
 	
 }

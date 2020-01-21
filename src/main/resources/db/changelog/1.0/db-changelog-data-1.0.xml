@@ -42,7 +42,7 @@
 			<column name="NAME">GORRA SUPREME</column>			
 			<column name="STOCK">220</column>
 			<column name="UNITPRICE">8.00</column>
-			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='CAMISETA'"/>
+			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='ACCESORIO'"/>
 		</insert>			
 	</changeSet>
 

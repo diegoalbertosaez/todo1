@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.diego.saez.model.Product;
+import com.diego.saez.dto.ProductDto;
+import com.diego.saez.exception.BussinessException;
 import com.diego.saez.service.impl.ProductService;
 
 @RestController
@@ -22,19 +23,30 @@ public class ProductController {
 	private ProductService productService;
 	
 	@RequestMapping(path="/",method= RequestMethod.GET)
-	public ResponseEntity<List<Product>> findAll() {
+	public ResponseEntity<List<ProductDto>> findAll() {
 		
-		List<Product> products = productService.findAll();
+		List<ProductDto> products = null;
+		try {
+			products = productService.findAll();
+		} catch (BussinessException e) {
+			e.printStackTrace();
+		}
 		
-		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		return new ResponseEntity<List<ProductDto>>(products, HttpStatus.OK);
 	}
 	
 	@RequestMapping(path="/{id}",method= RequestMethod.GET)
-	public ResponseEntity<List<Product>> findById(@PathVariable long id) {
+	public ResponseEntity<List<ProductDto>> findById(@PathVariable long id) {
 		
-		List<Product> products = productService.findAll();
+		List<ProductDto> products = null;
+		try {
+			products = productService.findAll();
+		} catch (BussinessException e) {
+			
+			e.printStackTrace();
+		}
 		
-		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		return new ResponseEntity<List<ProductDto>>(products, HttpStatus.OK);
 	}
 	
 }

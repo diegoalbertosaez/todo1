@@ -1,21 +1,29 @@
 package com.diego.saez.dto.mapper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Component;
 
 import com.diego.saez.dto.ProductDto;
 import com.diego.saez.dto.builder.CategoryBuilder;
 import com.diego.saez.dto.builder.ProductBuilder;
+import com.diego.saez.exception.MapperException;
 import com.diego.saez.mode.builder.ProductDtoBuilder;
 import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
+import static com.diego.saez.functional.LambdaExceptionWrappers.throwingConsumerWrapper;
 
+@Component
 public class ProductMapper implements IMapper<Product, ProductDto> {
 
 	@Override
-	public Product toEntity(ProductDto producDto) {
+	public Product toEntity(ProductDto producDto) throws MapperException {
 
 		Optional<ProductDto> productDtoOptional = Optional.ofNullable(producDto);
-		// productDtoOptional.orElseThrow(exceptionSupplier);
+		productDtoOptional
+				.orElseThrow(() -> new MapperException("Error al mapear productDto a entity:  dto no pude ser null"));
 		ProductDto productDtoToConvert = productDtoOptional.get();
 		CategoryBuilder categoryBuilder = CategoryBuilder.getInstance();
 		Category category = categoryBuilder.withId(productDtoToConvert.getIdCategory())
@@ -28,12 +36,14 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 	}
 
 	@Override
-	public ProductDto toDto(Product productEntity) {
+	public ProductDto toDto(Product productEntity) throws MapperException {
 		Optional<Product> productOptional = Optional.ofNullable(productEntity);
-		// productOptional.orElseThrow(exceptionSupplier);
+		productOptional
+				.orElseThrow(() -> new MapperException("Error al mapear productEntity a dto: entity no pude ser null"));
 		Product productToConvert = productOptional.get();
 		Optional<Category> categoryOptional = Optional.ofNullable(productEntity.getCategory());
-		// categoryOptional.orElseThrow(exceptionSupplier);
+		categoryOptional.orElseThrow(
+				() -> new MapperException("Error al mapear productEntity a dto: La cateogoría no puede ser null"));
 		Category category = categoryOptional.get();
 		ProductDtoBuilder productDtoBuilder = ProductDtoBuilder.getInstance();
 		ProductDto productDtoToReturn = productDtoBuilder.withIdProduct(productToConvert.getId())
@@ -41,6 +51,17 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 				.withNameCategory(category.getName()).withStockProduct(productToConvert.getStock())
 				.withUnitPrice(productToConvert.getUnitPrice()).build();
 		return productDtoToReturn;
+	}
+
+	@Override
+	public List<ProductDto> toDto(List<Product> products) throws MapperException {
+		Optional<List<Product>> productsOptional = Optional.ofNullable(products);
+		productsOptional.orElseThrow(() -> new MapperException(
+				"Error al mapear una lista de productEntity a una lista de dto:  La lista a convertir no puede ser null"));
+		List<Product> productsToConvert = productsOptional.get();
+		List<ProductDto> productsDtoToReturn = new ArrayList<>();
+		productsToConvert.stream().forEach(throwingConsumerWrapper(p -> productsDtoToReturn.add(this.toDto(p))));
+		return productsDtoToReturn;
 	}
 
 }

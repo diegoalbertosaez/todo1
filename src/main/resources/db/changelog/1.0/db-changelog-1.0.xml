@@ -5,6 +5,18 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
+	<!-- CREATION OF TABLE CATEGORY -->
+	<changeSet id="CREATE_TABLE_CATEGORY" author="diego.saez">
+		<createTable tableName="CATEGORY">
+			<column name="ID" type="INT" autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="NAME" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	
 	<!-- CREATION OF TABLE PRODUCT -->
 	<changeSet id="CREATE_TABLE_PRODUCT" author="diego.saez">
 		<createTable tableName="PRODUCT">
@@ -27,16 +39,5 @@
 			referencedColumnNames="ID" />
 	</changeSet>
 
-	<!-- CREATION OF TABLE CATEGORY -->
-	<changeSet id="CREATE_TABLE_CATEGORY" author="diego.saez">
-		<createTable tableName="CATEGORY">
-			<column name="ID" type="INT" autoIncrement="true">
-				<constraints primaryKey="true" />
-			</column>
-			<column name="NAME" type="VARCHAR(255)">
-				<constraints nullable="false" />
-			</column>
-		</createTable>
-	</changeSet>
 
 </databaseChangeLog>
