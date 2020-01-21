@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
@@ -14,13 +15,16 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="UNITPRICE" type="DECIMAL(20,2)"></column>
-			<column name="CATEGORYID" type="INT"></column>
+			<column name="CATEGORYID" type="INT">
+				<constraints nullable="false" />
+			</column>
 			<column name="STOCK" type="INT" defaultOnNull="0"
 				defaultValue="0"></column>
 		</createTable>
-		<addForeignKeyConstraint constraintName="FK_PRODUCT_CATEGORY"
-			referencedTableName="CATEGORY" baseColumnNames="CATEGORYID"
-			baseTableName="PRODUCT" referencedColumnNames="ID" />
+		<addForeignKeyConstraint
+			constraintName="FK_PRODUCT_CATEGORY" referencedTableName="CATEGORY"
+			baseColumnNames="CATEGORYID" baseTableName="PRODUCT"
+			referencedColumnNames="ID" />
 	</changeSet>
 
 	<!-- CREATION OF TABLE CATEGORY -->

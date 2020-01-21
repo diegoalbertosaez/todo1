@@ -1,7 +1,10 @@
 package com.diego.saez.dto;
 
-public class CategoryDTO {
+import java.io.Serializable;
 
+public class CategoryDto implements Serializable{
+
+	private static final long serialVersionUID = -3346745419802208802L;
 	private long id;
 	private String name;
 

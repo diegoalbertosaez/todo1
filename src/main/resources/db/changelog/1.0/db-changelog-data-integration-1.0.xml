@@ -8,7 +8,6 @@
 	  <changeSet id="DATA-PRODUCT-TEST" author="diego.saez">
 	  	<insert tableName="PRODUCT">
 	  	 <column name="NAME">PRODUCTO 1(IT)</column>
-	  	 <column name="DESCRIPTION">DESCRIPCION DE PRODUCTO</column>
 	  	 <column name="STOCK">1</column>
 	  	</insert>	  
 	  </changeSet>

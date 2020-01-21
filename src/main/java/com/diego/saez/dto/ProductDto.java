@@ -1,16 +1,20 @@
 package com.diego.saez.dto;
 
+import java.io.Serializable;
+
 /**
  * @author dalberto.saez
  *
  */
-public class ProductDTO {
+public class ProductDto implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
 	private Long idProduct;
 	private String nameProduct;
 	private int stockProduct;
 	private Long idCategory;
 	private String nameCategory;
+	private double unitPrice;
 
 	public Long getIdProduct() {
 		return idProduct;
@@ -50,6 +54,14 @@ public class ProductDTO {
 
 	public void setNameCategory(String nameCategory) {
 		this.nameCategory = nameCategory;
+	}
+
+	public double getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(double unitPrice) {
+		this.unitPrice = unitPrice;
 	}
 
 }
