@@ -30,7 +30,7 @@
 			<column name="NAME">PRODUCTO 1(IT)</column>
 			<column name="STOCK">1</column>
 			<column name="UNITPRICE">8.00</column>
-			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='CAMISETA'"/>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='CAMISETA')"/>
 		</insert>
 	</changeSet>
 

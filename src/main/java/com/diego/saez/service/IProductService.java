@@ -11,6 +11,8 @@ public interface IProductService {
 
 	ProductDto create(ProductDto product) throws BussinessException;
 
-	ProductDto update(ProductDto product) throws Exception;
+	ProductDto update(ProductDto product) throws BussinessException;
+
+	void delete(long id) throws BussinessException;
 	
 }

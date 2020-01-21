@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.diego.saez.dto.ProductDto;
@@ -17,10 +19,11 @@ import static com.diego.saez.functional.LambdaExceptionWrappers.throwingConsumer
 
 @Component
 public class ProductMapper implements IMapper<Product, ProductDto> {
-
+	private static final Logger logger = LoggerFactory.getLogger(ProductMapper.class);
+	
 	@Override
 	public Product toEntity(ProductDto producDto) throws MapperException {
-
+		logger.debug("Init toEntity(producDto)");
 		Optional<ProductDto> productDtoOptional = Optional.ofNullable(producDto);
 		productDtoOptional
 				.orElseThrow(() -> new MapperException("Error al mapear productDto a entity:  dto no pude ser null"));
@@ -32,11 +35,14 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 		Product productToReturn = productBuilder.withId(productDtoToConvert.getIdProduct())
 				.withName(productDtoToConvert.getNameProduct()).withStock(productDtoToConvert.getStockProduct())
 				.withUnitPrice(productDtoToConvert.getUnitPrice()).withCategory(category).build();
+		logger.debug("End toEntity(producDto)");
 		return productToReturn;
 	}
 
 	@Override
 	public ProductDto toDto(Product productEntity) throws MapperException {
+		logger.debug("Init toDto(productEntity)");
+		
 		Optional<Product> productOptional = Optional.ofNullable(productEntity);
 		productOptional
 				.orElseThrow(() -> new MapperException("Error al mapear productEntity a dto: entity no pude ser null"));
@@ -50,17 +56,23 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 				.withIdCategory(category.getId()).withNameProduct(productToConvert.getName())
 				.withNameCategory(category.getName()).withStockProduct(productToConvert.getStock())
 				.withUnitPrice(productToConvert.getUnitPrice()).build();
+		logger.debug("End toDto(productEntity)");
+		
 		return productDtoToReturn;
 	}
 
 	@Override
 	public List<ProductDto> toDto(List<Product> products) throws MapperException {
+		logger.debug("Init toDto(products)");
+
 		Optional<List<Product>> productsOptional = Optional.ofNullable(products);
 		productsOptional.orElseThrow(() -> new MapperException(
 				"Error al mapear una lista de productEntity a una lista de dto:  La lista a convertir no puede ser null"));
 		List<Product> productsToConvert = productsOptional.get();
 		List<ProductDto> productsDtoToReturn = new ArrayList<>();
 		productsToConvert.stream().forEach(throwingConsumerWrapper(p -> productsDtoToReturn.add(this.toDto(p))));
+		logger.debug("End toDto(products)");
+		
 		return productsDtoToReturn;
 	}
 

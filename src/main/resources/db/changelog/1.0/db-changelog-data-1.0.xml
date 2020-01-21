@@ -20,9 +20,6 @@
 		<insert tableName="CATEGORY">
 			<column name="name">ACCESORIO</column>
 		</insert>
-		<insert tableName="CATEGORY">
-			<column name="name">ACCESORIO</column>
-		</insert>
 	</changeSet>
 
 	<changeSet id="DATA-PRODUCT" author="diego.saez">
@@ -30,19 +27,19 @@
 			<column name="NAME">PLAYERA CAPITÁN AMERICA</column>			
 			<column name="STOCK">150</column>
 			<column name="UNITPRICE">10.00</column>
-			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='CAMISETA'"/>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='CAMISETA')"/>
 		</insert>
 		<insert tableName="PRODUCT">
 			<column name="NAME">CAMISETA SELECCIÓN COLOMBIA</column>			
 			<column name="STOCK">100</column>
 			<column name="UNITPRICE">70.00</column>
-			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='CAMISETA'"/>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='CAMISETA')"/>
 		</insert>		
 		<insert tableName="PRODUCT">
 			<column name="NAME">GORRA SUPREME</column>			
 			<column name="STOCK">220</column>
 			<column name="UNITPRICE">8.00</column>
-			<column name="CATEGORYID" valueComputed="SELECT ID FROM CATEGORY WHERE NAME='ACCESORIO'"/>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='ACCESORIO')"/>
 		</insert>			
 	</changeSet>
 
