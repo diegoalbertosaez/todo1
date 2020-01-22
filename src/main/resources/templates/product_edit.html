@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Producto</title>
+</head>
+<body>
+	<form th:action="@{/products}" th:object="${product}" method="POST" autocomplete="off" >
+		<input type="hidden" name="idProduct" th:value="${product.idProduct}" >
+		<label for="nameProduct">Nombre</label><br /> 
+		<input name="nameProduct" type="text" th:value="${product.nameProduct}" /> <br /> 
+		<label for="stockProduct">Stock</label><br /> 
+		<input name="stockProduct" type="text" th:value="${product.stockProduct}" /> <br /> 
+		<label for="unitPrice">Precio Unitario</label><br /> 
+		<input name="unitPrice" type="text" th:value="${product.unitPrice}" /> <br /> 
+		<label for="idCategory">Categoría</label><br />
+		<select name="idCategory">
+			<option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}" th:selected="${cat.id==product.idCategory}"></option>
+		</select>
+		<br />
+		<input type="submit" value="Guardar"> 		
+		</form>
+</body>
+</html>

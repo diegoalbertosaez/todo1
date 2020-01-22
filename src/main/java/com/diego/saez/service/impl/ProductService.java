@@ -53,12 +53,15 @@ public class ProductService implements IProductService {
 		Product productCreated = null;
 		ProductDto productDtoCreated = null;
 		try {
-			Assert.notNull(product, "El producto no puede ser nulo");
-			Assert.isNull(product.getIdProduct(), "El producto no debe contener id");
-			Assert.isTrue(product.getStockProduct() >= 0, "El stock del producto no puede ser negativo");
-			Assert.notNull(product.getNameProduct(), "El producto debe tener nombre");
-			Assert.hasLength(product.getNameProduct(), "El producto debe tener nombre");
-			Assert.notNull(product.getIdCategory(), "El producto debe tener una categoría");
+			Assert.notNull(product, "El producto no puede ser nulo.");
+			Assert.notNull(product.getNameProduct(), "El producto debe tener nombre.");
+			Assert.notNull(product.getIdCategory(), "El producto debe tener una categoría.");
+			Assert.notNull(product.getUnitPrice(), "El precio unitario del producto no debe ser null.");
+			Assert.notNull(product.getStockProduct(), "El stock del producto no debe ser null.");
+			Assert.isTrue(product.getStockProduct() >= 0, "El stock del producto no puede ser negativo.");
+			Assert.isTrue(product.getUnitPrice() >= 0, "El precio unitario no puede ser negativo.");
+			Assert.hasLength(product.getNameProduct(), "El producto debe tener nombre.");
+			Assert.isNull(product.getIdProduct(), "El producto no debe contener id.");
 			productCreated = productRepository.save(productMapper.toEntity(product));
 			productDtoCreated = productMapper.toDto(productCreated);
 		} catch (MapperException | DataAccessException e) {
@@ -81,6 +84,11 @@ public class ProductService implements IProductService {
 		try {
 			Assert.notNull(product, "El producto no puede ser nulo.");
 			Assert.notNull(product.getNameProduct(), "El producto debe tener nombre.");
+			Assert.notNull(product.getStockProduct(), "El stock del producto no debe ser null.");
+			Assert.notNull(product.getUnitPrice(), "El precio unitario del producto no debe ser null.");
+			Assert.notNull(product.getIdCategory(), "El producto debe tener una categoría.");
+			Assert.isTrue(product.getStockProduct() >= 0, "El stock del producto no puede ser negativo.");
+			Assert.isTrue(product.getUnitPrice() >= 0, "El precio unitario no puede ser negativo.");
 			Assert.hasLength(product.getNameProduct(), "El producto debe tener nombre.");
 			Optional<Product> productToUpdateOptional = productRepository.findById(product.getIdProduct());
 			productToUpdateOptional
@@ -97,19 +105,19 @@ public class ProductService implements IProductService {
 		logger.debug("End update(product)");
 		return productDtoUpdated;
 	}
-	
+
 	@Override
 	public ProductDto findById(Long id) throws BussinessException {
-		logger.debug("Init findById(id)");		
+		logger.debug("Init findById(id)");
 		ProductDto productDto = null;
 		try {
 			Assert.notNull(id, "El id del producto no puede ser null");
-			Product product = productRepository.getOne(id);		
+			Product product = productRepository.getOne(id);
 			productDto = productMapper.toDto(product);
 		} catch (MapperException | DataAccessException e) {
 			logger.error("Se ha producido un error al buscar un producto.", e);
 			throw new BussinessException("Se ha producido un error al buscar un producto.", e);
-		}catch (IllegalArgumentException e) {
+		} catch (IllegalArgumentException e) {
 			logger.error("Error en los argumentos al buscar un producto", e);
 			throw new BussinessException(e.getMessage());
 		}
@@ -130,7 +138,7 @@ public class ProductService implements IProductService {
 		} catch (DataAccessException e) {
 			logger.error("Se ha producido un error al eliminar un producto");
 			throw new BussinessException("Se ha producido un error al eliminar un producto.", e);
-		}catch (IllegalArgumentException e) {
+		} catch (IllegalArgumentException e) {
 			logger.error("Error en los argumentos al buscar un producto", e);
 			throw new BussinessException(e.getMessage());
 		}

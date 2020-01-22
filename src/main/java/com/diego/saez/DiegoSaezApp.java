@@ -12,7 +12,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @EntityScan("com.diego.saez.model")
-@EnableWebMvc
 @EnableJpaRepositories(basePackages = "com.diego.saez.repository")
 @EnableAutoConfiguration
 @EnableTransactionManagement

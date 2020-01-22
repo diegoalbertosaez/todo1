@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Productos</title>
+<style type="text/css">
+	.divTable {
+		display: table;
+		width: 100%;
+	}
+	
+	.divTableRow {
+		display: table-row;
+	}
+	
+	.divTableHeading {
+		background-color: #EEE;
+		display: table-header-group;
+	}
+	
+	.divTableCell, .divTableHead {
+		border: 1px solid #999999;
+		display: table-cell;
+		padding: 3px 10px;
+	}
+	
+	.divTableHeading {
+		background-color: #EEE;
+		display: table-header-group;
+		font-weight: bold;
+	}
+	
+	.divTableFoot {
+		background-color: #EEE;
+		display: table-footer-group;
+		font-weight: bold;
+	}
+	
+	.divTableBody {
+		display: table-row-group;
+	}
+</style>
+</head>
+<body>
+    <a href="products.html" th:href="@{/products/new}">Nuevo Producto</a>	
+	
+	<div class="divTable" style="width: 90%; border: 1px solid #000;">
+		<div class="divTableBody">
+			<div class="divTableRow">
+				<div class="divTableCell">Nombre</div>
+				<div class="divTableCell">Categoría</div>
+				<div class="divTableCell">Precio</div>
+				<div class="divTableCell">Stock</div>
+				<div class="divTableCell">&nbsp;</div>
+			</div>
+			<div class="divTableRow" th:each="prod : ${products}">
+				<div class="divTableCell" th:text="${prod.nameProduct}"></div>
+				<div class="divTableCell" th:text="${prod.nameCategory}"></div>
+				<div class="divTableCell" th:text="${prod.unitPrice}"></div>
+				<div class="divTableCell" th:text="${prod.stockProduct}"></div>
+				<div class="divTableCell">						
+					<a th:href="@{/products/edit/{id}(id=${prod.idProduct})}">Editar</a>	
+					<a href="#" id="delete" th:onclick="'deleteProduct(\'' + ${prod.idProduct} + '\');'">Eliminar</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/products.js}"></script>	
+</body>
+</html>

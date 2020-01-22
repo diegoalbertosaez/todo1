@@ -32,11 +32,11 @@ public class ProductDto implements Serializable{
 		this.nameProduct = nameProduct;
 	}
 
-	public int getStockProduct() {
+	public Integer getStockProduct() {
 		return stockProduct;
 	}
 
-	public void setStockProduct(int stockProduct) {
+	public void setStockProduct(Integer stockProduct) {
 		this.stockProduct = stockProduct;
 	}
 
@@ -56,7 +56,7 @@ public class ProductDto implements Serializable{
 		this.nameCategory = nameCategory;
 	}
 
-	public double getUnitPrice() {
+	public Double getUnitPrice() {
 		return unitPrice;
 	}
 

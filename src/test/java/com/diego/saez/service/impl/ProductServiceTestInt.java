@@ -36,12 +36,13 @@ public class ProductServiceTestInt {
 	@Transactional(readOnly = true)
 	public void testCreate() throws MapperException, BussinessException {
 		ProductDtoBuilder productBuilder = ProductDtoBuilder.getInstance();
-		ProductDto productDtoToSave = productBuilder.withNameProduct("Nuevo Producto").withUnitPrice(10D).withStockProduct(120).withIdCategory(2L).build();
+		ProductDto productDtoToSave = productBuilder.withNameProduct("Nuevo Producto").withUnitPrice(10D)
+				.withStockProduct(120).withIdCategory(2L).build();
 		ProductDto newProduct = productService.create(productDtoToSave);
 		Assertions.assertNotNull(newProduct.getIdProduct());
-		Assertions.assertEquals("Nuevo Producto",newProduct.getNameProduct());
+		Assertions.assertEquals("Nuevo Producto", newProduct.getNameProduct());
 		Assertions.assertNotNull(newProduct.getIdCategory());
-		Assertions.assertEquals(2L,newProduct.getIdCategory());
+		Assertions.assertEquals(2L, newProduct.getIdCategory());
 	}
 
 	@Test
@@ -49,7 +50,7 @@ public class ProductServiceTestInt {
 	public void testUpdate() throws BussinessException {
 		final String nameProduct = "Nuevo nombre";
 		ProductDto productDtoToUpdate = ProductDtoBuilder.getInstance().withIdProduct(1L).withIdCategory(3L)
-				.withNameProduct(nameProduct).build();
+				.withNameProduct(nameProduct).withStockProduct(120).withUnitPrice(2.60).build();
 		ProductDto productDtoUpdated = productService.update(productDtoToUpdate);
 		Assertions.assertNotNull(productDtoUpdated);
 		Assertions.assertNotNull(productDtoUpdated.getIdProduct());

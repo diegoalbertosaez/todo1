@@ -4,4 +4,11 @@ public class WebException extends Exception {
 
 	private static final long serialVersionUID = 4497218444336525673L;
 
+	public WebException() {
+	
+	}
+	
+	public WebException(String message) {
+		super(message);
+	}
 }
