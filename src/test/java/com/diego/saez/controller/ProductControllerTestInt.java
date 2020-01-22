@@ -78,6 +78,7 @@ public class ProductControllerTestInt {
 	}
 
 	@Test
+	@Transactional(readOnly = true)
 	public void testSaveProductCreate() throws Exception {
 		ProductDto dummyProductDto = getDummyProductDto();
 		RequestBuilder request = post("/products").param("nameProduct", dummyProductDto.getNameProduct())
@@ -88,6 +89,7 @@ public class ProductControllerTestInt {
 	}
 
 	@Test
+	@Transactional(readOnly = true)
 	public void testSaveProductCreateInvalidProductDto() throws Exception {
 		ProductDto dummyProductDto = getDummyProductDto();
 		dummyProductDto.setStockProduct(-5);
@@ -103,6 +105,7 @@ public class ProductControllerTestInt {
 	}
 
 	@Test
+	@Transactional(readOnly = true)
 	public void testSaveProductUpdate() throws Exception {
 		ProductDto dummyProductDto = getDummyProductDto();
 		dummyProductDto.setIdProduct(2L);
@@ -114,6 +117,7 @@ public class ProductControllerTestInt {
 	}
 
 	@Test
+	@Transactional(readOnly = true)
 	public void testSaveProductUpdateInvalidProductDto() throws Exception {
 		ProductDto dummyProductDto = getDummyProductDto();
 		dummyProductDto.setNameProduct(null);
