@@ -4,10 +4,10 @@ import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
 
 public class ProductBuilder {
-	private long id;
+	private Long id;
 	private String name;
-	private int stock;
-	private double unitPrice;
+	private Integer stock;
+	private Double unitPrice;
 	private Category category;
 
 	private ProductBuilder() {
@@ -18,7 +18,7 @@ public class ProductBuilder {
 		return new ProductBuilder();
 	}
 
-	public ProductBuilder withId(long id) {
+	public ProductBuilder withId(Long id) {
 		this.id = id;
 		return this;
 	}
@@ -28,12 +28,12 @@ public class ProductBuilder {
 		return this;
 	}
 
-	public ProductBuilder withStock(int stock) {
+	public ProductBuilder withStock(Integer stock) {
 		this.stock = stock;
 		return this;
 	}
 
-	public ProductBuilder withUnitPrice(double unitPrice) {
+	public ProductBuilder withUnitPrice(Double unitPrice) {
 		this.unitPrice = unitPrice;
 		return this;
 	}

@@ -20,18 +20,30 @@
 		<insert tableName="CATEGORY">
 			<column name="name">ACCESORIO</column>
 		</insert>
-		<insert tableName="CATEGORY">
-			<column name="name">ACCESORIO</column>
-		</insert>
 	</changeSet>
 
 	<changeSet id="DATA-PRODUCT-TEST" author="diego.saez">
 		<insert tableName="PRODUCT">
+			<column name="ID">1</column>
 			<column name="NAME">PRODUCTO 1(IT)</column>
 			<column name="STOCK">1</column>
 			<column name="UNITPRICE">8.00</column>
 			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='CAMISETA')"/>
 		</insert>
+		<insert tableName="PRODUCT">
+			<column name="ID">2</column>
+			<column name="NAME">PRODUCTO 2(IT)</column>
+			<column name="STOCK">1</column>
+			<column name="UNITPRICE">13.00</column>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='JUGUETE')"/>
+		</insert>		
+		<insert tableName="PRODUCT">
+			<column name="ID">3</column>		
+			<column name="NAME">PRODUCTO 3(IT)</column>
+			<column name="STOCK">4</column>
+			<column name="UNITPRICE">8.00</column>
+			<column name="CATEGORYID" valueComputed="(SELECT ID FROM CATEGORY WHERE NAME='JUGUETE')"/>
+		</insert>		
 	</changeSet>
 
 </databaseChangeLog>

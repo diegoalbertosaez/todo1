@@ -12,15 +12,16 @@ import com.diego.saez.dto.ProductDto;
 import com.diego.saez.dto.builder.CategoryBuilder;
 import com.diego.saez.dto.builder.ProductBuilder;
 import com.diego.saez.exception.MapperException;
-import com.diego.saez.mode.builder.ProductDtoBuilder;
 import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
+import com.diego.saez.model.builder.ProductDtoBuilder;
+
 import static com.diego.saez.functional.LambdaExceptionWrappers.throwingConsumerWrapper;
 
 @Component
 public class ProductMapper implements IMapper<Product, ProductDto> {
 	private static final Logger logger = LoggerFactory.getLogger(ProductMapper.class);
-	
+
 	@Override
 	public Product toEntity(ProductDto producDto) throws MapperException {
 		logger.debug("Init toEntity(producDto)");
@@ -42,7 +43,7 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 	@Override
 	public ProductDto toDto(Product productEntity) throws MapperException {
 		logger.debug("Init toDto(productEntity)");
-		
+
 		Optional<Product> productOptional = Optional.ofNullable(productEntity);
 		productOptional
 				.orElseThrow(() -> new MapperException("Error al mapear productEntity a dto: entity no pude ser null"));
@@ -57,7 +58,7 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 				.withNameCategory(category.getName()).withStockProduct(productToConvert.getStock())
 				.withUnitPrice(productToConvert.getUnitPrice()).build();
 		logger.debug("End toDto(productEntity)");
-		
+
 		return productDtoToReturn;
 	}
 
@@ -72,7 +73,7 @@ public class ProductMapper implements IMapper<Product, ProductDto> {
 		List<ProductDto> productsDtoToReturn = new ArrayList<>();
 		productsToConvert.stream().forEach(throwingConsumerWrapper(p -> productsDtoToReturn.add(this.toDto(p))));
 		logger.debug("End toDto(products)");
-		
+
 		return productsDtoToReturn;
 	}
 

@@ -1,4 +1,4 @@
-package com.diego.saez.mode.builder;
+package com.diego.saez.model.builder;
 
 import com.diego.saez.dto.ProductDto;
 
@@ -6,10 +6,10 @@ public class ProductDtoBuilder {
 
 	private Long idProduct;
 	private String nameProduct;
-	private int stockProduct;
+	private Integer stockProduct;
 	private Long idCategory;
 	private String nameCategory;
-	private double unitPrice;
+	private Double unitPrice;
 
 	private ProductDtoBuilder() {
 
@@ -19,7 +19,7 @@ public class ProductDtoBuilder {
 		return new ProductDtoBuilder();
 	}
 
-	public ProductDtoBuilder withIdProduct(long idProduct) {
+	public ProductDtoBuilder withIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 		return this;
 	}
@@ -29,7 +29,7 @@ public class ProductDtoBuilder {
 		return this;
 	}
 
-	public ProductDtoBuilder withStockProduct(int stockProduct) {
+	public ProductDtoBuilder withStockProduct(Integer stockProduct) {
 		this.stockProduct = stockProduct;
 		return this;
 	}
@@ -39,12 +39,12 @@ public class ProductDtoBuilder {
 		return this;
 	}
 	
-	public ProductDtoBuilder withIdCategory(long idCategory) {
+	public ProductDtoBuilder withIdCategory(Long idCategory) {
 		this.idCategory = idCategory;
 		return this;
 	}
 	
-	public ProductDtoBuilder withUnitPrice(double unitPrice) {
+	public ProductDtoBuilder withUnitPrice(Double unitPrice) {
 		this.unitPrice = unitPrice;
 		return this;
 	}

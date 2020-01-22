@@ -1,10 +1,10 @@
-package com.diego.saez.mode.builder;
+package com.diego.saez.model.builder;
 
 import com.diego.saez.dto.CategoryDto;
 
 public class CategoryDtoBuilder {
 
-	private long id;
+	private Long id;
 	private String name;
 
 	private CategoryDtoBuilder() {
@@ -15,7 +15,7 @@ public class CategoryDtoBuilder {
 		return new CategoryDtoBuilder();
 	}
 
-	public CategoryDtoBuilder withId(long id) {
+	public CategoryDtoBuilder withId(Long id) {
 		this.id = id;
 		return this;
 	}

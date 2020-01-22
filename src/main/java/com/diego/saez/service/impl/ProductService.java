@@ -33,9 +33,9 @@ public class ProductService implements IProductService {
 	@Override
 	public List<ProductDto> findAll() throws BussinessException {
 		logger.debug("Init findAll()");
-		List<Product> products = productRepository.findAll();
 		List<ProductDto> productsDto = new ArrayList<ProductDto>();
 		try {
+			List<Product> products = productRepository.findAll();
 			productsDto = productMapper.toDto(products);
 		} catch (MapperException | DataAccessException e) {
 			logger.error("Error al listar todos los productos", e);
@@ -97,12 +97,32 @@ public class ProductService implements IProductService {
 		logger.debug("End update(product)");
 		return productDtoUpdated;
 	}
+	
+	@Override
+	public ProductDto findById(Long id) throws BussinessException {
+		logger.debug("Init findById(id)");		
+		ProductDto productDto = null;
+		try {
+			Assert.notNull(id, "El id del producto no puede ser null");
+			Product product = productRepository.getOne(id);		
+			productDto = productMapper.toDto(product);
+		} catch (MapperException | DataAccessException e) {
+			logger.error("Se ha producido un error al buscar un producto.", e);
+			throw new BussinessException("Se ha producido un error al buscar un producto.", e);
+		}catch (IllegalArgumentException e) {
+			logger.error("Error en los argumentos al buscar un producto", e);
+			throw new BussinessException(e.getMessage());
+		}
+		logger.debug("End findById(id)");
+		return productDto;
+	}
 
 	@Override
 	@Transactional
-	public void delete(long id) throws BussinessException {
+	public void delete(Long id) throws BussinessException {
 		logger.debug("Init delete(id)");
 		try {
+			Assert.notNull(id, "El id del producto no puede ser null");
 			Optional<Product> productToUpdateOptional = productRepository.findById(id);
 			productToUpdateOptional
 					.orElseThrow(() -> new BussinessException("El producto que se desea elimina no se encuentra."));
@@ -110,6 +130,9 @@ public class ProductService implements IProductService {
 		} catch (DataAccessException e) {
 			logger.error("Se ha producido un error al eliminar un producto");
 			throw new BussinessException("Se ha producido un error al eliminar un producto.", e);
+		}catch (IllegalArgumentException e) {
+			logger.error("Error en los argumentos al buscar un producto", e);
+			throw new BussinessException(e.getMessage());
 		}
 		logger.debug("End delete(id)");
 	}

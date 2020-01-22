@@ -13,6 +13,8 @@ public interface IProductService {
 
 	ProductDto update(ProductDto product) throws BussinessException;
 
-	void delete(long id) throws BussinessException;
+	void delete(Long id) throws BussinessException;
+
+	ProductDto findById(Long id) throws BussinessException;
 	
 }

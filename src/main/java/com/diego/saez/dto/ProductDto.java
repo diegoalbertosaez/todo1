@@ -11,10 +11,10 @@ public class ProductDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private Long idProduct;
 	private String nameProduct;
-	private int stockProduct;
+	private Integer stockProduct;
 	private Long idCategory;
 	private String nameCategory;
-	private double unitPrice;
+	private Double unitPrice;
 
 	public Long getIdProduct() {
 		return idProduct;
@@ -60,7 +60,7 @@ public class ProductDto implements Serializable{
 		return unitPrice;
 	}
 
-	public void setUnitPrice(double unitPrice) {
+	public void setUnitPrice(Double unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 

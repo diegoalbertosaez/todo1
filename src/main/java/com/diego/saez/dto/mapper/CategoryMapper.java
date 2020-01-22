@@ -13,12 +13,13 @@ import org.springframework.stereotype.Component;
 import com.diego.saez.dto.CategoryDto;
 import com.diego.saez.exception.MapperException;
 import com.diego.saez.model.Category;
+import com.diego.saez.model.builder.CategoryDtoBuilder;
 
 @Component
 public class CategoryMapper implements IMapper<Category, CategoryDto> {
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryMapper.class);
-	
+
 	@Override
 	public Category toEntity(CategoryDto categoryDto) throws MapperException {
 		logger.error("No implementado");
@@ -27,8 +28,16 @@ public class CategoryMapper implements IMapper<Category, CategoryDto> {
 
 	@Override
 	public CategoryDto toDto(Category categoryEntity) throws MapperException {
-		logger.error("No implementado");
-		throw new MapperException("No implementado");
+		logger.error("Init toDto(categoryEntity)");
+		Optional<Category> categoryOptional = Optional.ofNullable(categoryEntity);
+		categoryOptional.orElseThrow(() -> new MapperException(
+				"Error al mapear una categoryEntity a un dto: La categoría a convertir no puede ser null"));
+		Category categoryToConvert = categoryOptional.get();
+		CategoryDtoBuilder categoryDtoBuilder = CategoryDtoBuilder.getInstance();
+		CategoryDto productDtoToReturn = categoryDtoBuilder.withId(categoryToConvert.getId())
+				.withName(categoryToConvert.getName()).build();
+		logger.error("End toDto(categoryEntity)");
+		return productDtoToReturn;
 	}
 
 	@Override
