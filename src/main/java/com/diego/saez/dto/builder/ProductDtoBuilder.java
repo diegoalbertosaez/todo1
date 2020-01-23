@@ -1,4 +1,4 @@
-package com.diego.saez.model.builder;
+package com.diego.saez.dto.builder;
 
 import com.diego.saez.dto.ProductDto;
 

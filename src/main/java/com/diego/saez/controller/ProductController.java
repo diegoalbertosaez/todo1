@@ -33,7 +33,7 @@ public class ProductController {
 	@Autowired
 	private ICategoryService categoryService;
 
-	@GetMapping("/products")
+	@GetMapping(value = { "/products", "/" })
 	public String findAll(Model modelo) throws WebException {
 		List<ProductDto> productsDto;
 		try {

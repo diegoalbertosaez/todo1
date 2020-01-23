@@ -1,4 +1,4 @@
-package com.diego.saez.dto.builder;
+package com.diego.saez.model.builder;
 
 import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;

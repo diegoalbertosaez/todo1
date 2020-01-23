@@ -9,12 +9,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.diego.saez.dto.ProductDto;
-import com.diego.saez.dto.builder.CategoryBuilder;
-import com.diego.saez.dto.builder.ProductBuilder;
+import com.diego.saez.dto.builder.ProductDtoBuilder;
 import com.diego.saez.exception.MapperException;
 import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
-import com.diego.saez.model.builder.ProductDtoBuilder;
+import com.diego.saez.model.builder.CategoryBuilder;
+import com.diego.saez.model.builder.ProductBuilder;
 
 import static com.diego.saez.functional.LambdaExceptionWrappers.throwingConsumerWrapper;
 

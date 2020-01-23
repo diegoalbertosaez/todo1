@@ -12,9 +12,9 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.diego.saez.dto.ProductDto;
+import com.diego.saez.dto.builder.ProductDtoBuilder;
 import com.diego.saez.exception.BussinessException;
 import com.diego.saez.exception.MapperException;
-import com.diego.saez.model.builder.ProductDtoBuilder;
 import com.diego.saez.service.IProductService;
 
 @SpringBootTest

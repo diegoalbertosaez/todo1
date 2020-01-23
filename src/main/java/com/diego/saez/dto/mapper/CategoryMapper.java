@@ -11,9 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.diego.saez.dto.CategoryDto;
+import com.diego.saez.dto.builder.CategoryDtoBuilder;
 import com.diego.saez.exception.MapperException;
 import com.diego.saez.model.Category;
-import com.diego.saez.model.builder.CategoryDtoBuilder;
 
 @Component
 public class CategoryMapper implements IMapper<Category, CategoryDto> {
@@ -22,13 +22,15 @@ public class CategoryMapper implements IMapper<Category, CategoryDto> {
 
 	@Override
 	public Category toEntity(CategoryDto categoryDto) throws MapperException {
-		logger.error("No implementado");
-		throw new MapperException("No implementado");
+		logger.debug("Init toEntity toDto(categoryDto)");
+		logger.error("Método no implementado");
+		logger.debug("End toEntity toDto(categoryDto)");
+		throw new MapperException("Método no implementado");
 	}
 
 	@Override
 	public CategoryDto toDto(Category categoryEntity) throws MapperException {
-		logger.error("Init toDto(categoryEntity)");
+		logger.debug("Init toDto(categoryEntity)");
 		Optional<Category> categoryOptional = Optional.ofNullable(categoryEntity);
 		categoryOptional.orElseThrow(() -> new MapperException(
 				"Error al mapear una categoryEntity a un dto: La categoría a convertir no puede ser null"));
@@ -36,7 +38,7 @@ public class CategoryMapper implements IMapper<Category, CategoryDto> {
 		CategoryDtoBuilder categoryDtoBuilder = CategoryDtoBuilder.getInstance();
 		CategoryDto productDtoToReturn = categoryDtoBuilder.withId(categoryToConvert.getId())
 				.withName(categoryToConvert.getName()).build();
-		logger.error("End toDto(categoryEntity)");
+		logger.debug("End toDto(categoryEntity)");
 		return productDtoToReturn;
 	}
 

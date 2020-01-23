@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.diego.saez.dto.ProductDto;
-import com.diego.saez.model.builder.ProductDtoBuilder;
+import com.diego.saez.dto.builder.ProductDtoBuilder;
 
 @ExtendWith(SpringExtension.class)
 @WebAppConfiguration
