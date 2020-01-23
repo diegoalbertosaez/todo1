@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case para {@link Category}
+ * Test Case for {@link Category}
  * 
  * @author diegosaez
  *
@@ -14,7 +14,7 @@ public class CategoryTest {
 	private Category category = new Category();
 
 	/**
-	 * Caso positivo para getId()
+	 * Positive case for getId()
 	 */
 	@Test
 	public void testGetId() {
@@ -24,7 +24,7 @@ public class CategoryTest {
 	}
 
 	/**
-	 * Caso positivo para getName()
+	 * Positive case for getName()
 	 */
 	@Test
 	public void testGetName() {

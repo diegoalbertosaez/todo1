@@ -17,6 +17,12 @@ import com.diego.saez.exception.BussinessException;
 import com.diego.saez.exception.MapperException;
 import com.diego.saez.service.IProductService;
 
+/**
+ * Integration test for {@link ProductService}
+ * 
+ * @author diegosaez
+ *
+ */
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 public class ProductServiceTestInt {
@@ -24,6 +30,11 @@ public class ProductServiceTestInt {
 	@Autowired
 	private IProductService productService;
 
+	/**
+	 * Positive case for findAll
+	 * 
+	 * @throws BussinessException
+	 */
 	@Test
 	@Transactional
 	public void testFindAll() throws BussinessException {
@@ -32,6 +43,12 @@ public class ProductServiceTestInt {
 		Assertions.assertTrue(products.size() > 2);
 	}
 
+	/**
+	 * Positive case for create
+	 * 
+	 * @throws MapperException
+	 * @throws BussinessException
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testCreate() throws MapperException, BussinessException {
@@ -45,6 +62,11 @@ public class ProductServiceTestInt {
 		Assertions.assertEquals(2L, newProduct.getIdCategory());
 	}
 
+	/**
+	 * Positive case for update
+	 * 
+	 * @throws BussinessException
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testUpdate() throws BussinessException {
@@ -59,6 +81,11 @@ public class ProductServiceTestInt {
 		Assertions.assertEquals(nameProduct, productDtoUpdated.getNameProduct());
 	}
 
+	/**
+	 * Positive case for delete
+	 * 
+	 * @throws BussinessException
+	 */
 	@Test
 	@Transactional
 	public void testDelete() throws BussinessException {
@@ -68,6 +95,11 @@ public class ProductServiceTestInt {
 		Assertions.assertEquals(2, products.size());
 	}
 
+	/**
+	 * Positive case for findById
+	 * 
+	 * @throws BussinessException
+	 */
 	@Test
 	@Transactional
 	public void testFindById() throws BussinessException {

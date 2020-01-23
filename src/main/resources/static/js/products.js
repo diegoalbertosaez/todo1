@@ -1,17 +1,14 @@
 
-function deleteProduct(idProduct){
+/**
+ * Sends a form to delete a product
+ * @param form_id
+ * @returns void
+ */
+function deleteProduct(form_id){
 	
 	var r = confirm("¿Esta seguro que desea eliminar?");
 	if(r){
-		console.log('Eliminando');
-		$.ajax({
-		    url: '/products',
-		    type: 'DELETE',
-		    data: {id:idProduct},
-		    success: function(data,result) {
-	           console.log(data);
-		    }
-		});
+		$('#'+form_id).submit();
 	}
 	
 }

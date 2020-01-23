@@ -7,7 +7,7 @@ import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
 
 /**
- * Test Case para {@link ProductBuilder}
+ * Test Case for {@link ProductBuilder}
  * 
  * @author diegosaez
  *
@@ -15,7 +15,7 @@ import com.diego.saez.model.Product;
 public class ProductBuilderTest {
 
 	/**
-	 * Caso positivo para build()
+	 * Positive case for build()
 	 */
 	@Test
 	public void testBuild() {

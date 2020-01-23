@@ -13,7 +13,7 @@ import com.diego.saez.model.Category;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * Test Case para {@link CategoryMapper}
+ * Test Case for {@link CategoryMapper}
  * 
  * @author diegosaez
  *
@@ -23,8 +23,8 @@ public class CategoryMapperTest extends UnitTest {
 	private CategoryMapper categoryMapper = new CategoryMapper();
 
 	/**
-	 * Caso positivo para toEntity. Hay excepción debido a que el método no está
-	 * implementado
+	 * Positive case for toEntity. There is an exception because the method is not
+	 * implemented
 	 * 
 	 * @throws MapperException
 	 */
@@ -34,7 +34,7 @@ public class CategoryMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para toDto(categoryEntity)
+	 * Positive case for toDto(categoryEntity)
 	 * 
 	 * @throws MapperException
 	 */
@@ -47,7 +47,7 @@ public class CategoryMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para toDto(categoriesEntity)
+	 * Positive case for toDto(categoriesEntity)
 	 * 
 	 * @throws MapperException
 	 */
@@ -61,7 +61,7 @@ public class CategoryMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para toDto(categoryEntity): La categoría enviada es null
+	 * Negative case for toDto(categoryEntity): The category entered is null
 	 * 
 	 * @throws MapperException
 	 */
@@ -72,7 +72,7 @@ public class CategoryMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para toDto(categoriesEntity): La lista de categorías enviada es
+	 * Negative case for toDto(categoriesEntity): The list of categories entered is
 	 * null
 	 * 
 	 * @throws MapperException
@@ -84,8 +84,8 @@ public class CategoryMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para toDto(categoriesEntity): La lista de categorías contiene
-	 * elementos en null
+	 * Negative case for toDto(categoriesEntity): The category list contains null
+	 * elements
 	 * 
 	 * @throws MapperException
 	 */

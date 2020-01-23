@@ -12,6 +12,12 @@ import com.diego.saez.dto.CategoryDto;
 import com.diego.saez.exception.BussinessException;
 import com.diego.saez.service.ICategoryService;
 
+/**
+ * Integration test for {@link CategoryService}
+ * 
+ * @author diegosaez
+ *
+ */
 @SpringBootTest
 @TestPropertySource(locations = "classpath:application-test.properties")
 public class CategoryServiceTestInt {
@@ -19,6 +25,11 @@ public class CategoryServiceTestInt {
 	@Autowired
 	private ICategoryService categoryService;
 
+	/**
+	 * Positive case for findAll
+	 * 
+	 * @throws BussinessException
+	 */
 	@Test
 	public void testFindAll() throws BussinessException {
 		List<CategoryDto> categories = categoryService.findAll();

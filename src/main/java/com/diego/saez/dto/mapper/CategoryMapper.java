@@ -15,11 +15,22 @@ import com.diego.saez.dto.builder.CategoryDtoBuilder;
 import com.diego.saez.exception.MapperException;
 import com.diego.saez.model.Category;
 
+/**
+ * Mapper to convert category entity object to dto object and vice versa
+ * 
+ * @author diegosaez
+ *
+ */
 @Component
 public class CategoryMapper implements IMapper<Category, CategoryDto> {
 
 	private static final Logger logger = LoggerFactory.getLogger(CategoryMapper.class);
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.diego.saez.dto.mapper.IMapper#toEntity(java.lang.Object)
+	 */
 	@Override
 	public Category toEntity(CategoryDto categoryDto) throws MapperException {
 		logger.debug("Init toEntity toDto(categoryDto)");
@@ -28,6 +39,11 @@ public class CategoryMapper implements IMapper<Category, CategoryDto> {
 		throw new MapperException("Método no implementado");
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.diego.saez.dto.mapper.IMapper#toDto(java.lang.Object)
+	 */
 	@Override
 	public CategoryDto toDto(Category categoryEntity) throws MapperException {
 		logger.debug("Init toDto(categoryEntity)");

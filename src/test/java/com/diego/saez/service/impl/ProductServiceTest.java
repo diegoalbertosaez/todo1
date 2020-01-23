@@ -17,7 +17,7 @@ import com.diego.saez.repository.ProductRepository;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * Test case para ProductService
+ * Test case for {@link ProductService}
  * 
  * @author diegosaez
  *
@@ -25,7 +25,7 @@ import com.diego.saez.test.common.UnitTest;
 public class ProductServiceTest extends UnitTest {
 
 	/**
-	 * Test positivo findAll
+	 * Positive case for findAll
 	 * 
 	 * @throws BussinessException
 	 */
@@ -45,8 +45,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para findAll, productRepository lanza
-	 * RecoverableDataAccessException. Se espera BussinessException
+	 * Negative case for findAll: productRepository throw
+	 * RecoverableDataAccessException. Expected BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -65,7 +65,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para create
+	 * Caso positivo for create
 	 * 
 	 * @throws BussinessException
 	 */
@@ -90,8 +90,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para create. Se envía producto con valores no válidos. Se
-	 * espera BussinessException.
+	 * Negative case for create. The product contains invalid values(negative
+	 * stock). Expected BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -104,8 +104,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para create, productRepository lanza
-	 * RecoverableDataAccessException. Se espera BussinessException
+	 * Negative case for create, productRepository throw
+	 * RecoverableDataAccessException. Expected BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -126,7 +126,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para update
+	 * Positive case for update
 	 * 
 	 * @throws BussinessException
 	 */
@@ -149,8 +149,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para update, el producto que se desea actualizar no existe. Se
-	 * espera BussinessException
+	 * Negative case for update: The product to update does not exist . Expected
+	 * BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -166,7 +166,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para update, el producto enviado es null. Se espera
+	 * Negative case for update: the product entered is null. Expected
 	 * BussinessException
 	 * 
 	 * @throws BussinessException
@@ -178,7 +178,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para findById
+	 * Positive case for findById
 	 * 
 	 * @throws BussinessException
 	 */
@@ -199,8 +199,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para findById, el id del producto que se desea buscar en null.
-	 * Se espera BussinessException
+	 * Negative case for findById: the product id to search is null. Expected
+	 * BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -211,8 +211,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para findById, productRepository lanza
-	 * RecoverableDataAccessException. Se espera BussinessException
+	 * Negative case for findById, productRepository throw
+	 * RecoverableDataAccessException. Expected BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -229,7 +229,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo para delete
+	 * Positive case for delete
 	 * 
 	 * @throws BussinessException
 	 */
@@ -247,8 +247,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para delete, el producto que se desea eliminar no existe. Se
-	 * espera BussinessException
+	 * Negative case for delete: The product to be removed does not exist. Expected
+	 * BussinessException
 	 * 
 	 * @throws BussinessException
 	 */
@@ -264,8 +264,8 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso negativo para delete, el id del producto que se desea eliminar es null.
-	 * Se espera BussinessException
+	 * Negative case for delete: The id of the product to be removed is null.
+	 * Expected BussinessException
 	 * 
 	 * @throws BussinessException
 	 */

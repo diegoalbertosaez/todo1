@@ -13,6 +13,16 @@
 		display: table-row;
 	}
 	
+	.divTableRowStock{
+		display: table-row;
+	}
+	
+	.divTableRowNoStock{
+		background-color: #FE6A6A;
+		color: white;
+		display: table-row;
+	}
+	
 	.divTableHeading {
 		background-color: #EEE;
 		display: table-header-group;
@@ -39,6 +49,11 @@
 	.divTableBody {
 		display: table-row-group;
 	}
+	
+	.divTableCell form{
+		display: inline;
+	}
+	
 </style>
 </head>
 <body>
@@ -53,14 +68,17 @@
 				<div class="divTableCell">Stock</div>
 				<div class="divTableCell">Acciones</div>
 			</div>
-			<div class="divTableRow" th:each="prod : ${products}">
+			<div  th:classappend="${prod.stockProduct <= 0} ? divTableRowNoStock : divTableRowStock" th:each="prod : ${products}" >
 				<div class="divTableCell" th:text="${prod.nameProduct}"></div>
 				<div class="divTableCell" th:text="${prod.nameCategory}"></div>
 				<div class="divTableCell" th:text="${prod.unitPrice}"></div>
 				<div class="divTableCell" th:text="${prod.stockProduct}"></div>
 				<div class="divTableCell">						
 					<a th:href="@{/products/edit/{id}(id=${prod.idProduct})}">Editar</a>	
-					<a href="#" id="delete" th:onclick="'deleteProduct(\'' + ${prod.idProduct} + '\');'">Eliminar</a>	
+					<form th:id="'product_form_' + ${prod.idProduct}" th:action="@{/products}" method="post">
+						<input type="hidden" name="id" th:value="${prod.idProduct}">
+						<a href="#" th:onclick="'deleteProduct(\'product_form_' + ${prod.idProduct} + '\');'">Eliminar</a>						
+					</form>					
 				</div>
 			</div>
 		</div>

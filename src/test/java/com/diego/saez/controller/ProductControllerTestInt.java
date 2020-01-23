@@ -1,6 +1,5 @@
 package com.diego.saez.controller;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -22,6 +21,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.diego.saez.dto.ProductDto;
 import com.diego.saez.dto.builder.ProductDtoBuilder;
 
+/**
+ * Integration test for {@link ProductController}
+ * 
+ * @author diegosaez
+ *
+ */
 @ExtendWith(SpringExtension.class)
 @WebAppConfiguration
 @AutoConfigureMockMvc
@@ -32,6 +37,11 @@ public class ProductControllerTestInt {
 	@Autowired
 	private MockMvc mockMvc;
 
+	/**
+	 * Positive case for findAll
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void testFindAll() throws Exception {
 		ModelAndView modelAndView = mockMvc.perform(get("/products")).andExpect(status().isOk()).andReturn()
@@ -43,6 +53,11 @@ public class ProductControllerTestInt {
 		Assertions.assertEquals("products", modelAndView.getViewName());
 	}
 
+	/**
+	 * Positive case for newProduct
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void testNewProduct() throws Exception {
 		ModelAndView modelAndView = mockMvc.perform(get("/products/new")).andExpect(status().isOk()).andReturn()
@@ -55,6 +70,11 @@ public class ProductControllerTestInt {
 		Assertions.assertEquals("product_new", modelAndView.getViewName());
 	}
 
+	/**
+	 * Positive case for editProduct
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void testEditProduct() throws Exception {
 		ModelAndView modelAndView = mockMvc.perform(get("/products/edit/1")).andExpect(status().isOk()).andReturn()
@@ -67,16 +87,26 @@ public class ProductControllerTestInt {
 		Assertions.assertEquals("product_edit", modelAndView.getViewName());
 	}
 
+	/**
+	 * Positive case for deleteProduct
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testDeleteProduct() throws Exception {
-		ModelAndView modelAndView = mockMvc.perform(delete("/products?id=1")).andExpect(status().is3xxRedirection())
+		ModelAndView modelAndView = mockMvc.perform(post("/products?id=1")).andExpect(status().is3xxRedirection())
 				.andReturn().getModelAndView();
 		Assertions.assertNotNull(modelAndView);
 		Assertions.assertTrue(modelAndView.getModelMap().isEmpty());
 		Assertions.assertEquals("redirect:/products", modelAndView.getViewName());
 	}
 
+	/**
+	 * Positive case for saveProduct (create)
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testSaveProductCreate() throws Exception {
@@ -88,6 +118,11 @@ public class ProductControllerTestInt {
 		mockMvc.perform(request).andExpect(status().is3xxRedirection());
 	}
 
+	/**
+	 * Negative case for saveProduct: productDto with negative stock is entered
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testSaveProductCreateInvalidProductDto() throws Exception {
@@ -104,6 +139,11 @@ public class ProductControllerTestInt {
 		Assertions.assertEquals("error", modelAndView.getViewName());
 	}
 
+	/**
+	 * Positive case for saveProduct (update)
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testSaveProductUpdate() throws Exception {
@@ -116,6 +156,11 @@ public class ProductControllerTestInt {
 		mockMvc.perform(request).andExpect(status().is3xxRedirection());
 	}
 
+	/**
+	 * Negative case for saveProduct: productDto with null name is entered
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	@Transactional(readOnly = true)
 	public void testSaveProductUpdateInvalidProductDto() throws Exception {
@@ -131,6 +176,11 @@ public class ProductControllerTestInt {
 		Assertions.assertEquals("error", modelAndView.getViewName());
 	}
 
+	/**
+	 * Return a dummy productDto for testing
+	 * 
+	 * @return {@link ProductDto}
+	 */
 	private ProductDto getDummyProductDto() {
 		ProductDtoBuilder productDtoBuilder = ProductDtoBuilder.getInstance();
 		ProductDto productDto = productDtoBuilder.withIdProduct(null).withIdCategory(1L)

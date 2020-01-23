@@ -4,10 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.diego.saez.dto.ProductDto;
-import com.diego.saez.dto.builder.ProductDtoBuilder;
 
 /**
- * Test Case para {@link ProductDtoBuilder}
+ * Test Case for {@link ProductDtoBuilder}
  * 
  * @author diegosaez
  *
@@ -15,7 +14,7 @@ import com.diego.saez.dto.builder.ProductDtoBuilder;
 public class ProductDtoBuilderTest {
 
 	/**
-	 * Caso positivo para build()
+	 * Positive case for build()
 	 */
 	@Test
 	public void testBuild() {

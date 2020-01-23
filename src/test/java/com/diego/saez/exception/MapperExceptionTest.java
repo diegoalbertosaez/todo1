@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case para {@link MapperException}
+ * Test Case for {@link MapperException}
  * 
  * @author diegosaez
  *
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class MapperExceptionTest {
 
 	/**
-	 * Caso positivo para MapperException()
+	 * Positive case for MapperException()
 	 */
 	@Test
 	public void testMapperException() {
@@ -21,7 +21,7 @@ public class MapperExceptionTest {
 	}
 
 	/**
-	 * Caso positivo MapperExceptionString(message)
+	 * Positive case for MapperExceptionString(message)
 	 */
 	@Test
 	public void testMapperExceptionString() {

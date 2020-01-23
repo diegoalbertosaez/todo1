@@ -6,13 +6,16 @@ import org.junit.jupiter.api.Test;
 import com.diego.saez.model.Category;
 
 /**
- * Test Case para {@link CategoryBuilder}
+ * Test Case for {@link CategoryBuilder}
  * 
  * @author diegosaez
  *
  */
 public class CategoryBuilderTest {
 
+	/**
+	 * Positive case for build
+	 */
 	@Test
 	public void testBuild() {
 		CategoryBuilder categoryBuilder = CategoryBuilder.getInstance();

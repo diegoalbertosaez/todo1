@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 import com.diego.saez.model.Product;
 
 /**
+ * 
+ * Repository to manage operations on the {@link Product} entity
+ * 
  * @author diegosaez
  *
  */

@@ -9,6 +9,12 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * Springboot class to start application.
+ * 
+ * @author diegosaez
+ *
+ */
 @SpringBootApplication
 @EntityScan("com.diego.saez.model")
 @EnableJpaRepositories(basePackages = "com.diego.saez.repository")
@@ -17,8 +23,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DiegoSaezApp {
 	private static final Logger logger = LoggerFactory.getLogger(DiegoSaezApp.class);
 
+	/**
+	 * Main method
+	 * 
+	 * @param args - application arguments
+	 */
 	public static void main(String[] args) {
-		logger.debug("Starting DiegoSaezApp");
+		logger.debug("Starting DiegoSaezApp ".concat(args.toString()));
 		SpringApplication.run(DiegoSaezApp.class, args);
 	}
 }
