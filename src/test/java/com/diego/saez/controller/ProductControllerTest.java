@@ -20,7 +20,7 @@ import com.diego.saez.service.impl.ProductService;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * Test case for {@link ProductController}
+ * Test case for {@link ProductController}.
  * 
  * @author diegosaez
  *
@@ -28,7 +28,7 @@ import com.diego.saez.test.common.UnitTest;
 public class ProductControllerTest extends UnitTest {
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -51,7 +51,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for newProduct
+	 * Positive case for newProduct.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -74,7 +74,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for editProduct
+	 * Positive case for editProduct.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -103,7 +103,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for deleteProduct
+	 * Positive case for deleteProduct.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -123,7 +123,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for saveProduct (create)
+	 * Positive case for saveProduct (create).
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -146,7 +146,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for saveProduct (update)
+	 * Positive case for saveProduct (update).
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -166,7 +166,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for findAll: productService throw {@link BussinessException}
+	 * Negative case for findAll: productService throw {@link BussinessException}.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -184,7 +184,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for newProduct: categoryService throw BussinessException
+	 * Negative case for newProduct: categoryService throw BussinessException.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -203,7 +203,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for editPruduct: productService throw BussinessException
+	 * Negative case for editPruduct: productService throw BussinessException.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -222,7 +222,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for deleteProduct: productService throw BussinessException
+	 * Negative case for deleteProduct: productService throw BussinessException.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -241,7 +241,7 @@ public class ProductControllerTest extends UnitTest {
 
 	/**
 	 * Negative case for saveProduct (create): productDto with negative stock is
-	 * entered
+	 * entered.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -257,7 +257,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for saveProduct (update): productDto with null name is entered
+	 * Negative case for saveProduct (update): productDto with null name is entered.
 	 * 
 	 * @throws BussinessException
 	 * @throws WebException
@@ -272,7 +272,7 @@ public class ProductControllerTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for handleError
+	 * Positive case for handleError.
 	 */
 	@Test
 	public void testHandleError() {

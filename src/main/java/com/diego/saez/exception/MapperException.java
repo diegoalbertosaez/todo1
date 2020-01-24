@@ -1,7 +1,7 @@
 package com.diego.saez.exception;
 
 /**
- * Exception for mappers
+ * Exception for mappers.
  * 
  * @author diegosaez
  *
@@ -11,14 +11,14 @@ public class MapperException extends Exception {
 	private static final long serialVersionUID = 2243801232702541992L;
 
 	/**
-	 * Default constructor
+	 * Default constructor.
 	 */
 	public MapperException() {
 
 	}
 
 	/**
-	 * Constructor with message
+	 * Constructor with message.
 	 * 
 	 * @param message
 	 */

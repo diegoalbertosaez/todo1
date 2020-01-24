@@ -18,8 +18,20 @@ import com.diego.saez.repository.ProductRepository;
 import com.diego.saez.service.impl.CategoryService;
 import com.diego.saez.service.impl.ProductService;
 
+/**
+ * Parent class containing common method for unit testing.
+ * 
+ * @author diegosaez
+ *
+ */
 public class UnitTest {
 
+	/**
+	 * Returns a dummy list of products for testing.
+	 * 
+	 * @param amount - amount of products in list.
+	 * @return {@link List}
+	 */
 	protected List<Product> getDummyProductList(Integer amount) {
 		List<Product> productsDummy = new ArrayList<Product>();
 		for (int i = 0; i < amount; i++) {
@@ -28,12 +40,23 @@ public class UnitTest {
 		return productsDummy;
 	}
 
+	/**
+	 * Return an object mock {@link ProductRepository} for testing.
+	 * 
+	 * @return {@link ProductRepository}
+	 */
 	protected ProductRepository getProductRepositoryMock() {
 		ProductRepository productRepositoryMock = (ProductRepository) EasyMock.createMock(ProductRepository.class);
 		EasyMock.reset(productRepositoryMock);
 		return productRepositoryMock;
 	}
 
+	/**
+	 * Return an dummy Product for testing.
+	 * 
+	 * @param index - zero-based index to set product id.
+	 * @return {@link Product}
+	 */
 	protected Product getDummyProduct(Integer index) {
 		ProductBuilder productBuilder = ProductBuilder.getInstance();
 		CategoryBuilder categoryBuilder = CategoryBuilder.getInstance();
@@ -44,6 +67,12 @@ public class UnitTest {
 		return product;
 	}
 
+	/**
+	 * Return an dummy ProductDto for testing.
+	 * 
+	 * @param index - index - zero-based index to set product id.
+	 * @return {@link ProductDto}
+	 */
 	protected ProductDto getDummyProductDto(Integer index) {
 		ProductDtoBuilder productDtoBuilder = ProductDtoBuilder.getInstance();
 		ProductDto productDto = productDtoBuilder.withIdProduct(index + 1L).withIdCategory(index + 1L)
@@ -52,6 +81,12 @@ public class UnitTest {
 		return productDto;
 	}
 
+	/**
+	 * Returns a dummy list of categories for testing.
+	 * 
+	 * @param amount - amount of categories in list.
+	 * @return {@link List}
+	 */
 	protected List<Category> getDummyCategoryList(Integer amount) {
 		List<Category> categoriesDummy = new ArrayList<Category>();
 
@@ -61,11 +96,23 @@ public class UnitTest {
 		return categoriesDummy;
 	}
 
+	/**
+	 * Return a dummy category for testing.
+	 * 
+	 * @param i - index - zero-based index to set product id.
+	 * @return {@link Category}
+	 */
 	protected Category getDummyCategory(Integer i) {
 		CategoryBuilder categoryBuilder = CategoryBuilder.getInstance();
 		return categoryBuilder.withId(i + 1L).withName("Category ".concat(Integer.toString(i + 1))).build();
 	}
 
+	/**
+	 * Returns a dummy list of categoriesDto for testing.
+	 * 
+	 * @param amount - amount of categories in list.
+	 * @return {@link List}
+	 */
 	protected List<CategoryDto> getDummyCategoryDtoList(Integer amount) {
 		List<CategoryDto> categoriesDtoDummy = new ArrayList<CategoryDto>();
 		CategoryDtoBuilder categoryDtoBuilder = CategoryDtoBuilder.getInstance();
@@ -76,24 +123,45 @@ public class UnitTest {
 		return categoriesDtoDummy;
 	}
 
+	/**
+	 * Return an object mock {@link CategoryRepository} for testing.
+	 * 
+	 * @return CategoryRepository
+	 */
 	protected CategoryRepository getCategoryRepositoryMock() {
 		CategoryRepository categoryRepositoryMock = (CategoryRepository) EasyMock.createMock(CategoryRepository.class);
 		EasyMock.reset(categoryRepositoryMock);
 		return categoryRepositoryMock;
 	}
 
+	/**
+	 * Return an object mock {@link ProductService} for testing.
+	 * 
+	 * @return {@link ProductService}
+	 */
 	protected ProductService getProductServiceMock() {
 		ProductService productServiceMock = (ProductService) EasyMock.createMock(ProductService.class);
 		EasyMock.reset(productServiceMock);
 		return productServiceMock;
 	}
 
+	/**
+	 * Return an object mock {@link CategoryService} for testing.
+	 * 
+	 * @return {@link CategoryService}
+	 */
 	protected CategoryService getCategoryServiceMock() {
 		CategoryService categoryServiceMock = (CategoryService) EasyMock.createMock(CategoryService.class);
 		EasyMock.reset(categoryServiceMock);
 		return categoryServiceMock;
 	}
 
+	/**
+	 * Returns a dummy list of productsDto for testing.
+	 * 
+	 * @param amount - amount of products in list.
+	 * @return {@link List}
+	 */
 	protected List<ProductDto> getDummyProductDtoList(Integer amount) {
 		List<ProductDto> productsDtoDummy = new ArrayList<ProductDto>();
 		for (int i = 0; i < amount; i++) {

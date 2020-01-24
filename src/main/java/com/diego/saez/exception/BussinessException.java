@@ -1,7 +1,7 @@
 package com.diego.saez.exception;
 
 /**
- * Exception for the business layer
+ * Exception for the business layer.
  * 
  * @author diegosaez
  *
@@ -11,13 +11,13 @@ public class BussinessException extends Exception {
 	private static final long serialVersionUID = 4067444725426470567L;
 
 	/**
-	 * Default constructor
+	 * Default constructor.
 	 */
 	public BussinessException() {
 	}
 
 	/**
-	 * Constructor with message and cause exception
+	 * Constructor with message and cause exception.
 	 * 
 	 * @param message
 	 * @param cause
@@ -27,7 +27,7 @@ public class BussinessException extends Exception {
 	}
 
 	/**
-	 * Constructor with message
+	 * Constructor with message.
 	 * 
 	 * @param message
 	 */

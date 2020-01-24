@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case for {@link BussinessException}
+ * Test Case for {@link BussinessException}.
  * 
  * @author diegosaez
  *
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class BussinessExceptionTest {
 
 	/**
-	 * Positive case for BussinessException()
+	 * Positive case for BussinessException().
 	 */
 	@Test
 	public void testBussinessException() {
@@ -21,7 +21,7 @@ public class BussinessExceptionTest {
 	}
 
 	/**
-	 * Positive case for BussinessException(message,cause)
+	 * Positive case for BussinessException(message,cause).
 	 */
 	@Test
 	public void testBussinessExceptionStringThrowable() {
@@ -33,7 +33,7 @@ public class BussinessExceptionTest {
 	}
 
 	/**
-	 * Positive case for BussinessException(message)
+	 * Positive case for BussinessException(message).
 	 */
 	@Test
 	public void testBussinessExceptionString() {

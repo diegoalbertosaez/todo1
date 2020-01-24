@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case for {@link CategoryDto}
+ * Test Case for {@link CategoryDto}.
  * 
  * @author diegosaez
  *
@@ -14,7 +14,7 @@ public class CategoryDtoTest {
 	CategoryDto categoryDto = new CategoryDto();
 
 	/**
-	 * Positive case for constructor
+	 * Positive case for constructor.
 	 */
 	public void testConstructor() {
 		CategoryDto categoryDto = new CategoryDto();
@@ -22,7 +22,7 @@ public class CategoryDtoTest {
 	}
 
 	/**
-	 * Positive case for getId()
+	 * Positive case for getId().
 	 */
 	@Test
 	public void testGetId() {
@@ -32,7 +32,7 @@ public class CategoryDtoTest {
 	}
 
 	/**
-	 * Positive case for getName()
+	 * Positive case for getName().
 	 */
 	@Test
 	public void testGetName() {

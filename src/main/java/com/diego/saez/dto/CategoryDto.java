@@ -3,7 +3,7 @@ package com.diego.saez.dto;
 import java.io.Serializable;
 
 /**
- * Data Transfer Object for category
+ * Data Transfer Object for category.
  * 
  * @author diegosaez
  *
@@ -12,17 +12,17 @@ public class CategoryDto implements Serializable {
 
 	private static final long serialVersionUID = -3346745419802208802L;
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private Long id;
 
 	/**
-	 * Name of category
+	 * Name of category.
 	 */
 	private String name;
 
 	/**
-	 * Return attribute id
+	 * Return attribute id.
 	 * 
 	 * @return id
 	 */
@@ -31,7 +31,7 @@ public class CategoryDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 */
@@ -40,7 +40,7 @@ public class CategoryDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute name
+	 * Return attribute name.
 	 * 
 	 * @return name
 	 */
@@ -49,7 +49,7 @@ public class CategoryDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 */

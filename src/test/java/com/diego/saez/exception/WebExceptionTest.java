@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case for {@link WebException}
+ * Test Case for {@link WebException}.
  * 
  * @author diegosaez
  *
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class WebExceptionTest {
 
 	/**
-	 * Positive case for WebException()
+	 * Positive case for WebException().
 	 */
 	@Test
 	public void testWebException() {
@@ -21,7 +21,7 @@ public class WebExceptionTest {
 	}
 
 	/**
-	 * Positive case for WebException(message)
+	 * Positive case for WebException(message).
 	 */
 	@Test
 	public void testWebExceptionString() {

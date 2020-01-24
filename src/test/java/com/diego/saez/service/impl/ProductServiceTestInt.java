@@ -18,7 +18,7 @@ import com.diego.saez.exception.MapperException;
 import com.diego.saez.service.IProductService;
 
 /**
- * Integration test for {@link ProductService}
+ * Integration test for {@link ProductService}.
  * 
  * @author diegosaez
  *
@@ -31,7 +31,7 @@ public class ProductServiceTestInt {
 	private IProductService productService;
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -44,7 +44,7 @@ public class ProductServiceTestInt {
 	}
 
 	/**
-	 * Positive case for create
+	 * Positive case for create.
 	 * 
 	 * @throws MapperException
 	 * @throws BussinessException
@@ -63,7 +63,7 @@ public class ProductServiceTestInt {
 	}
 
 	/**
-	 * Positive case for update
+	 * Positive case for update.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -82,7 +82,7 @@ public class ProductServiceTestInt {
 	}
 
 	/**
-	 * Positive case for delete
+	 * Positive case for delete.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -96,7 +96,7 @@ public class ProductServiceTestInt {
 	}
 
 	/**
-	 * Positive case for findById
+	 * Positive case for findById.
 	 * 
 	 * @throws BussinessException
 	 */

@@ -1,7 +1,7 @@
 package com.diego.saez.functional;
 
 /**
- * Functional interface for Consumer
+ * Functional interface for Consumer.
  * 
  * @author diegosaez
  *

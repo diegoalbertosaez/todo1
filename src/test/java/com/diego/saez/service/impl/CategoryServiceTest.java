@@ -15,7 +15,7 @@ import com.diego.saez.repository.CategoryRepository;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * TestCase for {@link CategoryService}
+ * TestCase for {@link CategoryService}.
  * 
  * @author diegosaez
  *
@@ -23,7 +23,7 @@ import com.diego.saez.test.common.UnitTest;
 public class CategoryServiceTest extends UnitTest {
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -45,7 +45,7 @@ public class CategoryServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for findAll: categoryRepository throw
-	 * RecoverableDataAccessException. Expected BussinessException
+	 * RecoverableDataAccessException. Expected BussinessException.
 	 */
 	@Test
 	public void testFindAllThrownException() {

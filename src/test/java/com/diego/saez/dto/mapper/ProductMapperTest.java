@@ -11,7 +11,7 @@ import com.diego.saez.model.Product;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * Test Case for {@link ProductMapper}
+ * Test Case for {@link ProductMapper}.
  * 
  * @author diegosaez
  *
@@ -21,7 +21,7 @@ public class ProductMapperTest extends UnitTest {
 	private ProductMapper productMapper = new ProductMapper();
 
 	/**
-	 * Positive case for toEntity(productDto)
+	 * Positive case for toEntity(productDto).
 	 * 
 	 * @throws MapperException
 	 */
@@ -37,7 +37,7 @@ public class ProductMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for toEntity: The product entered is null
+	 * Negative case for toEntity: The product entered is null.
 	 * 
 	 * @throws MapperException
 	 */
@@ -47,7 +47,7 @@ public class ProductMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for toDto(product)
+	 * Positive case for toDto(product).
 	 * 
 	 * @throws MapperException
 	 */
@@ -61,7 +61,7 @@ public class ProductMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for toDto: The product entered is null
+	 * Negative case for toDto: The product entered is null.
 	 * 
 	 * @throws MapperException
 	 */
@@ -72,7 +72,7 @@ public class ProductMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for toDto(List<Product>)
+	 * Positive case for toDto(List<Product>).
 	 * 
 	 * @throws MapperException
 	 */
@@ -84,7 +84,7 @@ public class ProductMapperTest extends UnitTest {
 	}
 
 	/**
-	 * Negative case for toDto: The product list entered is null
+	 * Negative case for toDto: The product list entered is null.
 	 * 
 	 * @throws MapperException
 	 */

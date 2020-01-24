@@ -13,7 +13,7 @@ import com.diego.saez.exception.BussinessException;
 import com.diego.saez.service.ICategoryService;
 
 /**
- * Integration test for {@link CategoryService}
+ * Integration test for {@link CategoryService}.
  * 
  * @author diegosaez
  *
@@ -26,7 +26,7 @@ public class CategoryServiceTestInt {
 	private ICategoryService categoryService;
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws BussinessException
 	 */

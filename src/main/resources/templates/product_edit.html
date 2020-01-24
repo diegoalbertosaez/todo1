@@ -2,23 +2,50 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Producto</title>
+<title th:text="'Editar ' + ${product.nameProduct}"></title>
+<style type="text/css">
+
+	form {
+	    border: 1px solid black;
+	    display: inline-block;
+	    text-align: left;    
+	    padding: 5px;
+	    width: 25%;
+	}
+	
+	body {
+	    text-align: center; 
+	}
+	
+	form input{
+		width: 95%;	
+		margin-bottom: 10px;
+	}
+
+	form select{
+		width: 95%;	
+		margin-bottom: 10px;
+	}	
+
+</style>
 </head>
 <body>
-	<form th:action="@{/products}" th:object="${product}" method="POST" autocomplete="off" >
-		<input type="hidden" name="idProduct" th:value="${product.idProduct}" >
-		<label for="nameProduct">Nombre</label><br /> 
-		<input name="nameProduct" type="text" th:value="${product.nameProduct}" /> <br /> 
-		<label for="stockProduct">Stock</label><br /> 
-		<input name="stockProduct" type="text" th:value="${product.stockProduct}" /> <br /> 
-		<label for="unitPrice">Precio Unitario</label><br /> 
-		<input name="unitPrice" type="text" th:value="${product.unitPrice}" /> <br /> 
-		<label for="idCategory">Categoría</label><br />
-		<select name="idCategory">
-			<option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}" th:selected="${cat.id==product.idCategory}"></option>
-		</select>
-		<br />
-		<input type="submit" value="Guardar"> 		
+	<div id="contaniner">	 	
+		<form th:action="@{/products}" th:object="${product}" method="POST" autocomplete="off" >
+			<input type="hidden" name="idProduct" th:value="${product.idProduct}" >
+			<label for="nameProduct">Nombre</label><br /> 
+			<input name="nameProduct" type="text" th:value="${product.nameProduct}" /> <br /> 
+			<label for="stockProduct">Stock</label><br /> 
+			<input name="stockProduct" type="text" th:value="${product.stockProduct}" /> <br /> 
+			<label for="unitPrice">Precio Unitario</label><br /> 
+			<input name="unitPrice" type="text" th:value="${product.unitPrice}" /> <br /> 
+			<label for="idCategory">Categoría</label><br />
+			<select name="idCategory">
+				<option th:each="cat : ${categories}" th:value="${cat.id}" th:text="${cat.name}" th:selected="${cat.id==product.idCategory}"></option>
+			</select>
+			<br />
+			<input type="submit" value="Guardar"> 		
 		</form>
+	</div>
 </body>
 </html>

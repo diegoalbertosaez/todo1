@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * Static Resource Configuration Class
+ * Static Resource Configuration Class.
  * 
  * @author diegosaez
  *

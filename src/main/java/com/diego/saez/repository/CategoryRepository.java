@@ -6,7 +6,7 @@ import com.diego.saez.model.Category;
 
 /**
  * 
- * Repository to manage operations on the {@link Category} entity
+ * Repository to manage operations on the {@link Category} entity.
  * 
  * @author diegosaez
  *

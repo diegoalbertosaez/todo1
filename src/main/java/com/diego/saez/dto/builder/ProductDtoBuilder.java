@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.diego.saez.dto.ProductDto;
 
 /**
- * Builder for data transfer object productDto
+ * Builder for data transfer object productDto.
  * 
  * @author diegosaez
  *
@@ -15,44 +15,44 @@ public class ProductDtoBuilder {
 	private static final Logger logger = LoggerFactory.getLogger(ProductDtoBuilder.class);
 
 	/**
-	 * Id of product
+	 * Id of product.
 	 */
 	private Long idProduct;
 
 	/**
-	 * Name of product
+	 * Name of product.
 	 */
 	private String nameProduct;
 
 	/**
-	 * Stock of product
+	 * Stock of product.
 	 */
 	private Integer stockProduct;
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private Long idCategory;
 
 	/**
-	 * Name of category
+	 * Name of category.
 	 */
 	private String nameCategory;
 
 	/**
-	 * UnitPrice of product
+	 * UnitPrice of product.
 	 */
 	private Double unitPrice;
 
 	/**
-	 * Private constructor
+	 * Private constructor.
 	 */
 	private ProductDtoBuilder() {
 
 	}
 
 	/**
-	 * Returns an instance of {@link ProductDtoBuilder}
+	 * Returns an instance of {@link ProductDtoBuilder}.
 	 * 
 	 * @return {@link ProductDtoBuilder}
 	 */
@@ -62,7 +62,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute idProduct
+	 * Set value for attribute idProduct.
 	 * 
 	 * @param idProduct
 	 * @return {@link ProductDtoBuilder}
@@ -76,7 +76,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute nameProduct
+	 * Set value for attribute nameProduct.
 	 * 
 	 * @param nameProduct
 	 * @return
@@ -90,7 +90,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute stockProduct
+	 * Set value for attribute stockProduct.
 	 * 
 	 * @param stockProduct
 	 * @return {@link ProductDtoBuilder}
@@ -105,7 +105,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute nameCategory
+	 * Set value for attribute nameCategory.
 	 * 
 	 * @param nameCategory
 	 * @return {@link ProductDtoBuilder}
@@ -119,7 +119,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute idCategory
+	 * Set value for attribute idCategory.
 	 * 
 	 * @param idCategory
 	 * @return {@link ProductDtoBuilder}
@@ -133,7 +133,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute unitPrice
+	 * Set value for attribute unitPrice.
 	 * 
 	 * @param unitPrice
 	 * @return {@link ProductDtoBuilder}
@@ -147,7 +147,7 @@ public class ProductDtoBuilder {
 	}
 
 	/**
-	 * Build and return an instance of {@link ProductDto}
+	 * Build and return an instance of {@link ProductDto}.
 	 * 
 	 * @return {@link ProductDto}
 	 */

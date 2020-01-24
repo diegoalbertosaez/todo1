@@ -6,7 +6,7 @@ import com.diego.saez.dto.CategoryDto;
 import com.diego.saez.exception.BussinessException;
 
 /**
- * Service proxy interface for category
+ * Service proxy interface for category.
  * 
  * @author diegosaez
  *
@@ -14,7 +14,7 @@ import com.diego.saez.exception.BussinessException;
 public interface ICategoryService {
 
 	/**
-	 * Returns a list of all categories
+	 * Returns a list of all categories.
 	 * 
 	 * @return {@link List}
 	 * @throws BussinessException

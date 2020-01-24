@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Entity class for the category table in the database
+ * Entity class for the category table in the database.
  * 
  * @author diegosaez
  *
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 public class Category {
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,12 +25,12 @@ public class Category {
 	private Long id;
 
 	/**
-	 * Name of category
+	 * Name of category.
 	 */
 	private String name;
 
 	/**
-	 * Return attribute id
+	 * Return attribute id.
 	 * 
 	 * @return id
 	 */
@@ -39,7 +39,7 @@ public class Category {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 */
@@ -48,7 +48,7 @@ public class Category {
 	}
 
 	/**
-	 * Return attribute
+	 * Return attribute.
 	 * 
 	 * @return name
 	 */
@@ -57,7 +57,7 @@ public class Category {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 */

@@ -7,7 +7,7 @@ import com.diego.saez.model.Category;
 import com.diego.saez.model.Product;
 
 /**
- * Builder for entity object product
+ * Builder for entity object product.
  * 
  * @author diegosaez
  * 
@@ -16,39 +16,39 @@ public class ProductBuilder {
 	private static final Logger logger = LoggerFactory.getLogger(ProductBuilder.class);
 
 	/**
-	 * Id of product
+	 * Id of product.
 	 */
 	private Long id;
 
 	/**
-	 * Name of product
+	 * Name of product.
 	 */
 	private String name;
 
 	/**
-	 * Stock of product
+	 * Stock of product.
 	 */
 	private Integer stock;
 
 	/**
-	 * UnitPrice for product
+	 * UnitPrice for product.
 	 */
 	private Double unitPrice;
 
 	/**
-	 * Category of product
+	 * Category of product.
 	 */
 	private Category category;
 
 	/**
-	 * Private constructor
+	 * Private constructor.
 	 */
 	private ProductBuilder() {
 
 	}
 
 	/**
-	 * Returns an instance of {@link ProductBuilder}
+	 * Returns an instance of {@link ProductBuilder}.
 	 * 
 	 * @return {@link ProductBuilder}
 	 */
@@ -58,7 +58,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 * @return {@link ProductBuilder}
@@ -72,7 +72,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 * @return {@link ProductBuilder}
@@ -86,7 +86,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Set value for attribute stock
+	 * Set value for attribute stock.
 	 * 
 	 * @param stock
 	 * @return {@link ProductBuilder}
@@ -100,7 +100,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Set value for attribute unitPrice
+	 * Set value for attribute unitPrice.
 	 * 
 	 * @param unitPrice
 	 * @return {@link ProductBuilder}
@@ -114,7 +114,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Set value for attribute category
+	 * Set value for attribute category.
 	 * 
 	 * @param category
 	 * @return {@link ProductBuilder}
@@ -128,7 +128,7 @@ public class ProductBuilder {
 	}
 
 	/**
-	 * Build and return an instance of {@link Product}
+	 * Build and return an instance of {@link Product}.
 	 * 
 	 * @return {@link Product}
 	 */

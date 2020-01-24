@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.diego.saez.model.Category;
 
 /**
- * Builder for entity object category
+ * Builder for entity object category.
  * 
  * @author diegosaez
  *
@@ -15,24 +15,24 @@ public class CategoryBuilder {
 	private static final Logger logger = LoggerFactory.getLogger(CategoryBuilder.class);
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private Long id;
 
 	/**
-	 * Name of category
+	 * Name of category.
 	 */
 	private String name;
 
 	/**
-	 * Private constructor
+	 * Private constructor.
 	 */
 	private CategoryBuilder() {
 
 	}
 
 	/**
-	 * Returns an instance of {@link CategoryBuilder}
+	 * Returns an instance of {@link CategoryBuilder}.
 	 * 
 	 * @return {@link CategoryBuilder}
 	 */
@@ -42,7 +42,7 @@ public class CategoryBuilder {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 * @return {@link CategoryBuilder}
@@ -56,7 +56,7 @@ public class CategoryBuilder {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 * @return {@link CategoryBuilder}
@@ -70,7 +70,7 @@ public class CategoryBuilder {
 	}
 
 	/**
-	 * Build and return an instance of {@link Category}
+	 * Build and return an instance of {@link Category}.
 	 * 
 	 * @return {@link Category}
 	 */

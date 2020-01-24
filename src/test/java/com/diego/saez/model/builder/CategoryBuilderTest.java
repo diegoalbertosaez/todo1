@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import com.diego.saez.model.Category;
 
 /**
- * Test Case for {@link CategoryBuilder}
+ * Test Case for {@link CategoryBuilder}.
  * 
  * @author diegosaez
  *
@@ -14,7 +14,7 @@ import com.diego.saez.model.Category;
 public class CategoryBuilderTest {
 
 	/**
-	 * Positive case for build
+	 * Positive case for build.
 	 */
 	@Test
 	public void testBuild() {

@@ -1,7 +1,7 @@
 package com.diego.saez.exception;
 
 /**
- * Exception for the web layer
+ * Exception for the web layer.
  * 
  * @author diegosaez
  *
@@ -11,14 +11,14 @@ public class WebException extends Exception {
 	private static final long serialVersionUID = 4497218444336525673L;
 
 	/**
-	 * Defaults constructor
+	 * Defaults constructor.
 	 */
 	public WebException() {
 
 	}
 
 	/**
-	 * Constructor with message
+	 * Constructor with message.
 	 * 
 	 * @param message
 	 */

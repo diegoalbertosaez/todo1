@@ -20,7 +20,7 @@ import com.diego.saez.model.builder.ProductBuilder;
 
 /**
  * 
- * Mapper to convert product entity object to dto object and vice versa
+ * Mapper to convert product entity object to dto object and vice versa.
  * 
  * @author diegosaez
  *

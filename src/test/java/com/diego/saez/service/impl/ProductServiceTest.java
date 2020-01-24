@@ -17,7 +17,7 @@ import com.diego.saez.repository.ProductRepository;
 import com.diego.saez.test.common.UnitTest;
 
 /**
- * Test case for {@link ProductService}
+ * Test case for {@link ProductService}.
  * 
  * @author diegosaez
  *
@@ -25,7 +25,7 @@ import com.diego.saez.test.common.UnitTest;
 public class ProductServiceTest extends UnitTest {
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -46,7 +46,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for findAll: productRepository throw
-	 * RecoverableDataAccessException. Expected BussinessException
+	 * RecoverableDataAccessException. Expected BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -65,7 +65,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Caso positivo for create
+	 * Caso positivo for create.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -105,7 +105,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for create, productRepository throw
-	 * RecoverableDataAccessException. Expected BussinessException
+	 * RecoverableDataAccessException. Expected BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -126,7 +126,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for update
+	 * Positive case for update.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -150,7 +150,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for update: The product to update does not exist . Expected
-	 * BussinessException
+	 * BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -167,7 +167,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for update: the product entered is null. Expected
-	 * BussinessException
+	 * BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -178,7 +178,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for findById
+	 * Positive case for findById.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -200,7 +200,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for findById: the product id to search is null. Expected
-	 * BussinessException
+	 * BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -212,7 +212,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for findById, productRepository throw
-	 * RecoverableDataAccessException. Expected BussinessException
+	 * RecoverableDataAccessException. Expected BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -229,7 +229,7 @@ public class ProductServiceTest extends UnitTest {
 	}
 
 	/**
-	 * Positive case for delete
+	 * Positive case for delete.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -248,7 +248,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for delete: The product to be removed does not exist. Expected
-	 * BussinessException
+	 * BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */
@@ -265,7 +265,7 @@ public class ProductServiceTest extends UnitTest {
 
 	/**
 	 * Negative case for delete: The id of the product to be removed is null.
-	 * Expected BussinessException
+	 * Expected BussinessException.
 	 * 
 	 * @throws BussinessException
 	 */

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * Test Case for {@link Product}
+ * Test Case for {@link Product}.
  * 
  * @author diegosaez
  *
@@ -15,7 +15,7 @@ public class ProductTest {
 	private Product product = new Product();
 
 	/**
-	 * Positive case for getId()
+	 * Positive case for getId().
 	 */
 	@Test
 	public void testGetId() {
@@ -25,7 +25,7 @@ public class ProductTest {
 	}
 
 	/**
-	 * Positive case for getName()
+	 * Positive case for getName().
 	 */
 	@Test
 	public void testGetName() {
@@ -35,7 +35,7 @@ public class ProductTest {
 	}
 
 	/**
-	 * Positive case for getStock()
+	 * Positive case for getStock().
 	 */
 	@Test
 	public void testGetStock() {
@@ -45,7 +45,7 @@ public class ProductTest {
 	}
 
 	/**
-	 * Positive case for getUnitPrice()
+	 * Positive case for getUnitPrice().
 	 */
 	@Test
 	public void testGetUnitPrice() {
@@ -55,7 +55,7 @@ public class ProductTest {
 	}
 
 	/**
-	 * Positive case for getCategory()
+	 * Positive case for getCategory().
 	 */
 	@Test
 	public void testGetCategory() {

@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
- * Entity class for the product table in the database
+ * Entity class for the product table in the database.
  * 
  * @author diegosaez
  *
@@ -27,29 +27,29 @@ public class Product {
 	private Long id;
 
 	/**
-	 * Name of product
+	 * Name of product.
 	 */
 	private String name;
 
 	/**
-	 * Stock of product
+	 * Stock of product.
 	 */
 	private Integer stock;
 
 	/**
-	 * UnitPrice for product
+	 * UnitPrice for product.
 	 */
 	private Double unitPrice;
 
 	/**
-	 * Category of product
+	 * Category of product.
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "CATEGORYID")
 	private Category category;
 
 	/**
-	 * Return attribute for id
+	 * Return attribute for id.
 	 * 
 	 * @return id
 	 */
@@ -58,7 +58,7 @@ public class Product {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 */
@@ -67,7 +67,7 @@ public class Product {
 	}
 
 	/**
-	 * Return attribute for name
+	 * Return attribute for name.
 	 * 
 	 * @return name
 	 */
@@ -76,7 +76,7 @@ public class Product {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 */
@@ -85,7 +85,7 @@ public class Product {
 	}
 
 	/**
-	 * Return attribute for stock
+	 * Return attribute for stock.
 	 * 
 	 * @return stock
 	 */
@@ -94,7 +94,7 @@ public class Product {
 	}
 
 	/**
-	 * Set value for attribute stock
+	 * Set value for attribute stock.
 	 * 
 	 * @param stock
 	 */
@@ -103,7 +103,7 @@ public class Product {
 	}
 
 	/**
-	 * Return attribute for unitPrice
+	 * Return attribute for unitPrice.
 	 * 
 	 * @return unitPrice
 	 */
@@ -112,7 +112,7 @@ public class Product {
 	}
 
 	/**
-	 * Set value for attribute unitPrice
+	 * Set value for attribute unitPrice.
 	 * 
 	 * @param unitPrice
 	 */
@@ -121,7 +121,7 @@ public class Product {
 	}
 
 	/**
-	 * Return attribute for category
+	 * Return attribute for category.
 	 * 
 	 * @return category
 	 */
@@ -130,7 +130,7 @@ public class Product {
 	}
 
 	/**
-	 * Set value for attribute category
+	 * Set value for attribute category.
 	 * 
 	 * @param category
 	 */

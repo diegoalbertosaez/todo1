@@ -7,7 +7,7 @@ import com.diego.saez.model.Product;
 
 /**
  * 
- * Repository to manage operations on the {@link Product} entity
+ * Repository to manage operations on the {@link Product} entity.
  * 
  * @author diegosaez
  *

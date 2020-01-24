@@ -3,7 +3,7 @@ package com.diego.saez.dto;
 import java.io.Serializable;
 
 /**
- * Data Transfer Object for product
+ * Data Transfer Object for product.
  * 
  * @author diegosaez
  *
@@ -12,37 +12,37 @@ public class ProductDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	/**
-	 * Id of product
+	 * Id of product.
 	 */
 	private Long idProduct;
 
 	/**
-	 * Name of product
+	 * Name of product.
 	 */
 	private String nameProduct;
 
 	/**
-	 * Stock of product
+	 * Stock of product.
 	 */
 	private Integer stockProduct;
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private Long idCategory;
 
 	/**
-	 * Name of category
+	 * Name of category.
 	 */
 	private String nameCategory;
 
 	/**
-	 * UnitPrice of product
+	 * UnitPrice of product.
 	 */
 	private Double unitPrice;
 
 	/**
-	 * Return attribute idProduct
+	 * Return attribute idProduct.
 	 * 
 	 * @return idProduct
 	 */
@@ -51,7 +51,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute idProduct
+	 * Set value for attribute idProduct.
 	 * 
 	 * @param idProduct
 	 */
@@ -60,7 +60,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute nameProduct
+	 * Return attribute nameProduct.
 	 * 
 	 * @return nameProduct
 	 */
@@ -69,7 +69,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute nameProduct
+	 * Set value for attribute nameProduct.
 	 * 
 	 * @param nameProduct
 	 */
@@ -78,7 +78,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute stockProduct
+	 * Return attribute stockProduct.
 	 * 
 	 * @return
 	 */
@@ -87,7 +87,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute stockProduct
+	 * Set value for attribute stockProduct.
 	 * 
 	 * @param stockProduct
 	 */
@@ -96,7 +96,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute idCategory
+	 * Return attribute idCategory.
 	 * 
 	 * @return
 	 */
@@ -105,7 +105,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute idCategory
+	 * Set value for attribute idCategory.
 	 * 
 	 * @param idCategory
 	 */
@@ -114,7 +114,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute nameCategory
+	 * Return attribute nameCategory.
 	 * 
 	 * @return nameCategory
 	 */
@@ -123,7 +123,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute nameCategory
+	 * Set value for attribute nameCategory.
 	 * 
 	 * @param nameCategory
 	 */
@@ -132,7 +132,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Return attribute
+	 * Return attribute.
 	 * 
 	 * @return unitPrice
 	 */
@@ -141,7 +141,7 @@ public class ProductDto implements Serializable {
 	}
 
 	/**
-	 * Set value for attribute unitPrice
+	 * Set value for attribute unitPrice.
 	 * 
 	 * @param unitPrice
 	 */

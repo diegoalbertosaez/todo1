@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test Case for {@link ProductDto}
+ * Test Case for {@link ProductDto}.
  * 
  * @author diegosaez
  *
@@ -17,7 +17,7 @@ public class ProductDtoTest {
 	private ProductDto productDto = new ProductDto();
 
 	/**
-	 * Positive case for constructor
+	 * Positive case for constructor.
 	 */
 	public void testConstructor() {
 		ProductDto productDto = new ProductDto();
@@ -26,7 +26,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getIdProduct()
+	 * Positive case for getIdProduct().
 	 */
 	@Test
 	public void testGetIdProduct() {
@@ -36,7 +36,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getNameProduct
+	 * Positive case for getNameProduct.
 	 */
 	@Test
 	public void testGetNameProduct() {
@@ -46,7 +46,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getStockProduct
+	 * Positive case for getStockProduct.
 	 */
 	@Test
 	public void testGetStockProduct() {
@@ -56,7 +56,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getIdCategory
+	 * Positive case for getIdCategory.
 	 */
 	@Test
 	public void testGetIdCategory() {
@@ -66,7 +66,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getNameCategory
+	 * Positive case for getNameCategory.
 	 */
 	@Test
 	public void testGetNameCategory() {
@@ -76,7 +76,7 @@ public class ProductDtoTest {
 	}
 
 	/**
-	 * Positive case for getUnitPrice
+	 * Positive case for getUnitPrice.
 	 */
 	@Test
 	public void testGetUnitPrice() {

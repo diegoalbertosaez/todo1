@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.diego.saez.dto.CategoryDto;
 
 /**
- * Builder for data transfer object categoryDto
+ * Builder for data transfer object categoryDto.
  * 
  * @author diegosaez
  *
@@ -15,24 +15,24 @@ public class CategoryDtoBuilder {
 	private static final Logger logger = LoggerFactory.getLogger(CategoryDtoBuilder.class);
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private Long id;
 
 	/**
-	 * Id of category
+	 * Id of category.
 	 */
 	private String name;
 
 	/**
-	 * Private constructor
+	 * Private constructor.
 	 */
 	private CategoryDtoBuilder() {
 
 	}
 
 	/**
-	 * Returns an instance of {@link CategoryDtoBuilder}
+	 * Returns an instance of {@link CategoryDtoBuilder}.
 	 * 
 	 * @return {@link CategoryDtoBuilder}
 	 */
@@ -42,7 +42,7 @@ public class CategoryDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute id
+	 * Set value for attribute id.
 	 * 
 	 * @param id
 	 * @return {@link CategoryDtoBuilder}
@@ -56,7 +56,7 @@ public class CategoryDtoBuilder {
 	}
 
 	/**
-	 * Set value for attribute name
+	 * Set value for attribute name.
 	 * 
 	 * @param name
 	 * @return {@link CategoryDtoBuilder}
@@ -70,7 +70,7 @@ public class CategoryDtoBuilder {
 	}
 
 	/**
-	 * Build and return an instance of {@link CategoryDto}
+	 * Build and return an instance of {@link CategoryDto}.
 	 * 
 	 * @return {@link CategoryDto}
 	 */

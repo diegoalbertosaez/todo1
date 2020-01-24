@@ -17,7 +17,7 @@ import com.diego.saez.repository.CategoryRepository;
 import com.diego.saez.service.ICategoryService;
 
 /**
- * Category service implementation for business layer
+ * Category service implementation for business layer.
  * 
  * @author diegosaez
  *

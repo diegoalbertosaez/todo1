@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Wrapper exception for lambda expression
+ * Wrapper exception for lambda expression.
  * 
  * @author diegosaez
  *
@@ -15,7 +15,7 @@ public class LambdaExceptionWrappers {
 	private static final Logger logger = LoggerFactory.getLogger(LambdaExceptionWrappers.class);
 
 	/**
-	 * Lambda wrapper method
+	 * Lambda wrapper method.
 	 * 
 	 * @param throwingConsumer
 	 * @return {@link Consumer}

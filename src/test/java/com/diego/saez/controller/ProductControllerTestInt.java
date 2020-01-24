@@ -22,7 +22,7 @@ import com.diego.saez.dto.ProductDto;
 import com.diego.saez.dto.builder.ProductDtoBuilder;
 
 /**
- * Integration test for {@link ProductController}
+ * Integration test for {@link ProductController}.
  * 
  * @author diegosaez
  *
@@ -38,7 +38,7 @@ public class ProductControllerTestInt {
 	private MockMvc mockMvc;
 
 	/**
-	 * Positive case for findAll
+	 * Positive case for findAll.
 	 * 
 	 * @throws Exception
 	 */
@@ -54,7 +54,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Positive case for newProduct
+	 * Positive case for newProduct.
 	 * 
 	 * @throws Exception
 	 */
@@ -71,7 +71,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Positive case for editProduct
+	 * Positive case for editProduct.
 	 * 
 	 * @throws Exception
 	 */
@@ -88,7 +88,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Positive case for deleteProduct
+	 * Positive case for deleteProduct.
 	 * 
 	 * @throws Exception
 	 */
@@ -103,7 +103,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Positive case for saveProduct (create)
+	 * Positive case for saveProduct (create).
 	 * 
 	 * @throws Exception
 	 */
@@ -119,7 +119,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Negative case for saveProduct: productDto with negative stock is entered
+	 * Negative case for saveProduct: productDto with negative stock is entered.
 	 * 
 	 * @throws Exception
 	 */
@@ -140,7 +140,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Positive case for saveProduct (update)
+	 * Positive case for saveProduct (update).
 	 * 
 	 * @throws Exception
 	 */
@@ -157,7 +157,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Negative case for saveProduct: productDto with null name is entered
+	 * Negative case for saveProduct: productDto with null name is entered.
 	 * 
 	 * @throws Exception
 	 */
@@ -177,7 +177,7 @@ public class ProductControllerTestInt {
 	}
 
 	/**
-	 * Return a dummy productDto for testing
+	 * Return a dummy productDto for testing.
 	 * 
 	 * @return {@link ProductDto}
 	 */

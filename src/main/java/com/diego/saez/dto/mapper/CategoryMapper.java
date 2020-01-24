@@ -16,7 +16,7 @@ import com.diego.saez.exception.MapperException;
 import com.diego.saez.model.Category;
 
 /**
- * Mapper to convert category entity object to dto object and vice versa
+ * Mapper to convert category entity object to dto object and vice versa.
  * 
  * @author diegosaez
  *

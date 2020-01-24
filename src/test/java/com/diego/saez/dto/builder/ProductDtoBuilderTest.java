@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import com.diego.saez.dto.ProductDto;
 
 /**
- * Test Case for {@link ProductDtoBuilder}
+ * Test Case for {@link ProductDtoBuilder}.
  * 
  * @author diegosaez
  *
@@ -14,7 +14,7 @@ import com.diego.saez.dto.ProductDto;
 public class ProductDtoBuilderTest {
 
 	/**
-	 * Positive case for build()
+	 * Positive case for build().
 	 */
 	@Test
 	public void testBuild() {

@@ -21,7 +21,7 @@ import com.diego.saez.repository.ProductRepository;
 import com.diego.saez.service.IProductService;
 
 /**
- * Product service implementation for business layer
+ * Product service implementation for business layer.
  * 
  * @author diegosaez
  *
@@ -142,7 +142,7 @@ public class ProductService implements IProductService {
 		logger.debug("Init findById(id)");
 		ProductDto productDto = null;
 		try {
-			Assert.notNull(id, "El id del producto no puede ser null");
+			Assert.notNull(id, "El id del producto no puede ser null.");
 			Product product = productRepository.getOne(id);
 			logger.debug("Encontrado producto ".concat(product.getName()));
 			productDto = productMapper.toDto(product);

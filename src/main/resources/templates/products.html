@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <title>Productos</title>
 <style type="text/css">
+
 	.divTable {
 		display: table;
-		width: 100%;
+		width: 90%;
+		margin-top: 15px;
 	}
 	
 	.divTableRow {
@@ -23,29 +25,16 @@
 		display: table-row;
 	}
 	
-	.divTableHeading {
-		background-color: #EEE;
-		display: table-header-group;
-	}
-	
 	.divTableCell, .divTableHead {
 		border: 1px solid #999999;
 		display: table-cell;
 		padding: 3px 10px;
 	}
 	
-	.divTableHeading {
+	.header{
 		background-color: #EEE;
-		display: table-header-group;
 		font-weight: bold;
 	}
-	
-	.divTableFoot {
-		background-color: #EEE;
-		display: table-footer-group;
-		font-weight: bold;
-	}
-	
 	.divTableBody {
 		display: table-row-group;
 	}
@@ -59,14 +48,14 @@
 <body>
     <a href="products.html" th:href="@{/products/new}">Nuevo Producto</a>	
 	
-	<div class="divTable" style="width: 90%; border: 1px solid #000;">
+	<div class="divTable">
 		<div class="divTableBody">
 			<div class="divTableRow">
-				<div class="divTableCell">Nombre</div>
-				<div class="divTableCell">Categoría</div>
-				<div class="divTableCell">Precio</div>
-				<div class="divTableCell">Stock</div>
-				<div class="divTableCell">Acciones</div>
+				<div class="divTableHead header">Nombre</div>
+				<div class="divTableHead header">Categoría</div>
+				<div class="divTableHead header">Precio</div>
+				<div class="divTableHead header">Stock</div>
+				<div class="divTableHead header">Acciones</div>
 			</div>
 			<div  th:classappend="${prod.stockProduct <= 0} ? divTableRowNoStock : divTableRowStock" th:each="prod : ${products}" >
 				<div class="divTableCell" th:text="${prod.nameProduct}"></div>
